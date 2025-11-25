@@ -2725,12 +2725,10 @@ ol > li {
 }
 
 .hinfo .htitle.ht1{
-    font-size: 22px;
     transform: translateX(-105%);
 }
 
 .hinfo .htitle.ht2{
-    font-size: 22px;
     transform: translateX(10%);
 }
 
@@ -2867,6 +2865,10 @@ ol > li {
     .otime2.ot10 {
         padding: 15px 15px;
         letter-spacing: 0;
+    }
+    .hinfo .htitle.ht1,
+    .hinfo .htitle.ht2{
+        font-size: 22px;
     }
 }
 
