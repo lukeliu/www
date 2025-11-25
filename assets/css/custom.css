@@ -2103,6 +2103,13 @@ ol > li {
     stroke-dasharray: 2.5,15;
     stroke-linecap: round;
 }
+.line7 { 
+    stroke: #7cb9a5; 
+    stroke-width: 7px; 
+    fill: none;
+    stroke-dasharray: 2.5,15;
+    stroke-linecap: round;
+}
 #history2 .line1,
 #history2 .line2,
 #history2 .line3,
@@ -2836,10 +2843,6 @@ ol > li {
         font-size: 16px;
         width: 92%;
     }
-    .remark i,
-    .remark br {
-        display: none;
-    }
     .hinfo img {
         max-width: 400px;
     }
@@ -2869,6 +2872,10 @@ ol > li {
     .hinfo .htitle.ht1,
     .hinfo .htitle.ht2{
         font-size: 22px;
+    }
+    .remark i,
+    .remark br {
+        display: none;
     }
 }
 
