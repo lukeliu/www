@@ -2842,6 +2842,8 @@ ol > li {
         bottom: 1%;
         font-size: 16px;
         width: 92%;
+        display: flex;
+        justify-content: center;
     }
     .hinfo img {
         max-width: 400px;
