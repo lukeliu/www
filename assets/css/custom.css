@@ -2725,10 +2725,12 @@ ol > li {
 }
 
 .hinfo .htitle.ht1{
+    font-size: 22px;
     transform: translateX(-105%);
 }
 
 .hinfo .htitle.ht2{
+    font-size: 22px;
     transform: translateX(10%);
 }
 
