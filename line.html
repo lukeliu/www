@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery動態SVG連線（拖拽版）</title>
+    <style>
+        #history1 {
+            position: relative;
+            width: 500px;
+            height: 300px;
+            border: 1px solid #ccc;
+            margin: 20px;
+        }
+        #svgAll {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+        }
+        .box {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: #4285F4;
+            border-radius: 4px;
+            cursor: move;
+            z-index: 10;
+        }
+        #box1 { left: 10px; top: 10px; }
+        #box2 { left: 50px; top: 90px; }
+        svg { 
+            position: absolute; 
+            top: 0; 
+            left: 0; 
+            width: 100%; 
+            height: 100%; 
+            pointer-events: none; 
+            z-index: 5;
+        }
+        .line1 { 
+            stroke: #d0a380; 
+            stroke-width: 1px; 
+            fill: none; 
+        }
+        .line2 { 
+            stroke: #ced465; 
+            stroke-width: 1px; 
+            fill: none; 
+        }
+        .line3 { 
+            stroke: #e9b552; 
+            stroke-width: 1px; 
+            fill: none; 
+        }
+        .line4 { 
+            stroke: #7cb9a5; 
+            stroke-width: 1px; 
+            fill: none; 
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+</head>
+<body>
+    <div id="history1">
+        <div id="svgAll"></div>
+        <div class="box" id="box1"></div>
+        <div class="box" id="box2"></div>
+    </div>
+    <button class="btn" type="button">line</button>
+
+    <script>
+        // 核心連線生成函數
+        function connectionLines(containerSelector, selector1, selector2, Line, style) {
+            const $container = $(containerSelector);
+            const $container2 = $('#svgAll');
+            const $el1 = $(selector1);
+            const $el2 = $(selector2);
+            
+            // 移除已有SVG避免重複
+            //$container2.find('svg.connection-svg').remove();
+            
+            // 創建SVG容器
+            const $svg = $('<svg class="connection-svg"></svg>');
+            $container2.append($svg);
+
+            // 獲取元素中心座標（相對容器）
+            function getElementCenter($el) {
+                const offset = $el.position();
+                const width = $el.outerWidth();
+                const height = $el.outerHeight();
+                return {
+                    x: offset.left + width / 2,
+                    y: offset.top + height / 2
+                };
+            }
+
+            // 繪製所有連線
+            function drawAllLines() {
+                $svg.empty(); // 清空原有連線
+                const center1 = getElementCenter($el1);
+                const center2 = getElementCenter($el2);
+
+                // 創建SVG路徑的工具函數
+                function createPath(d) {
+                    const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+                    path.setAttribute("d", d);
+                    path.setAttribute("class", Line);
+                    return path;
+                }
+
+                var path1;
+
+                switch(style) {
+                    case 'hv':
+                        // 先橫後豎
+                        path1 = createPath(`M ${center1.x} ${center1.y} H ${center2.x} V ${center2.y}`);
+                        break;
+                        
+                    case 'vh':
+                        // 先豎後橫
+                        path1 = createPath(`M ${center1.x} ${center1.y} V ${center2.y} H ${center2.x}`);
+                        break;
+                        
+                    case 'hvh':
+                        // 先橫後豎再橫（中間中轉點）
+                        var midX1 = (center1.x + center2.x) / 2;
+                        path1 = createPath(`M ${center1.x} ${center1.y} H ${midX1} V ${center2.y} H ${center2.x}`);
+                        break;
+                        
+                    case 'vhv':
+                        // 先豎後橫再豎（中間中轉點）
+                        var midY1 = (center1.y + center2.y) / 2;
+                        path1 = createPath(`M ${center1.x} ${center1.y} V ${midY1} H ${center2.x} V ${center2.y}`);
+                        break;
+                }
+
+                // 添加所有路徑到SVG
+                $svg.append(path1);
+            }
+
+            // 初始化繪製
+            drawAllLines();
+
+            // 綁定拖拽事件（需jQuery UI）
+            $el1.add($el2).draggable({
+                containment: containerSelector,
+                drag: drawAllLines, // 拖拽中實時更新
+                stop: drawAllLines  // 拖拽結束更新
+            });
+
+            return $svg;
+        }
+
+        // 調用示例：傳入容器選擇器和兩個元素選擇器
+        $(document).ready(function() {
+            $('.btn').click(function(){
+                connectionLines('#history1', '#box1', '#box2', 'line1', 'hvh');
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery SVG动态连线示例</title>
+    <style>
+        .box {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: #4285F4;
+            border-radius: 4px;
+        }
+        #box1 { left: 10px; top: 10px; }
+        #box2 { left: 50px; top: 90px; }
+        svg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; }
+        .line { stroke: #333; stroke-width: 1px; fill: none; }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="box" id="box1"></div>
+    <div class="box" id="box2"></div>
+    <svg id="connectionSvg"></svg>
+
+    <script>
+        $(document).ready(function() {
+            // 獲取div中心座標（使用jQuery獲取位置）
+            const $box1 = $('#box1');
+            const $box2 = $('#box2');
+            const box1 = { 
+                x: parseInt($box1.css('left')) + 10, 
+                y: parseInt($box1.css('top')) + 10 
+            };
+            const box2 = { 
+                x: parseInt($box2.css('left')) + 10, 
+                y: parseInt($box2.css('top')) + 10 
+            };
+            const $svg = $('#connectionSvg');
+
+            // 創建SVG路徑的工具函數
+            function createPath(d) {
+                const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+                path.setAttribute("d", d);
+                path.setAttribute("class", "line");
+                return path;
+            }
+
+            // 1. 先橫後豎連線
+            function drawLineHorizontalFirst() {
+                const midX = box2.x;
+                const midY = box1.y;
+                const d = `M ${box1.x} ${box1.y} H ${midX} V ${box2.y}`;
+                $svg.append(createPath(d));
+            }
+
+            // 2. 先豎後橫連線
+            function drawLineVerticalFirst() {
+                const midX = box1.x;
+                const midY = box2.y;
+                const d = `M ${box1.x} ${box1.y} V ${midY} H ${box2.x}`;
+                $svg.append(createPath(d));
+            }
+
+            // 3. 先橫後豎再橫連線
+            function drawLineHorizontalVerticalHorizontal() {
+                const mid1X = (box1.x + box2.x) / 2;
+                const mid1Y = box1.y;
+                const mid2X = mid1X;
+                const mid2Y = box2.y;
+                const d = `M ${box1.x} ${box1.y} H ${mid1X} V ${mid2Y} H ${box2.x}`;
+                $svg.append(createPath(d));
+            }
+
+            // 4. 先豎後橫再豎連線
+            function drawLineVerticalHorizontalVertical() {
+                const mid1X = box1.x;
+                const mid1Y = (box1.y + box2.y) / 2;
+                const mid2X = box2.x;
+                const mid2Y = mid1Y;
+                const d = `M ${box1.x} ${box1.y} V ${mid1Y} H ${mid2X} V ${box2.y}`;
+                $svg.append(createPath(d));
+            }
+
+            // 執行所有連線繪製
+            drawLineHorizontalFirst();
+            drawLineVerticalFirst();
+            drawLineHorizontalVerticalHorizontal();
+            drawLineVerticalHorizontalVertical();
+
+            // 更新連線的方法
+            function updateLines() {
+                $svg.empty(); // 清空原有連線
+                // 重新計算座標並繪製
+                box1.x = parseInt($box1.css('left')) + 10;
+                box1.y = parseInt($box1.css('top')) + 10;
+                box2.x = parseInt($box2.css('left')) + 10;
+                box2.y = parseInt($box2.css('top')) + 10;
+                // 重新繪製所有連線
+                drawLineHorizontalFirst();
+                drawLineVerticalFirst();
+                drawLineHorizontalVerticalHorizontal();
+                drawLineVerticalHorizontalVertical();
+            }
+
+            // 示例：拖動div後更新連線
+            $('.box').draggable({
+                stop: updateLines
+            });
+        });
+    </script>
+</body>
+</html>

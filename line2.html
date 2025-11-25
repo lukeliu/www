@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>多樣式SVG連接線</title>
+    <style>
+        .container {
+            position: relative;
+            width: 600px;
+            height: 400px;
+            border: 1px solid #ccc;
+            margin: 20px;
+            background-color: #f9f9f9;
+        }
+        .box {
+            position: absolute;
+            width: 60px;
+            height: 40px;
+            background-color: #4CAF50;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 5px;
+            cursor: move;
+        }
+        #svg-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+        .controls {
+            margin: 20px;
+        }
+        button {
+            margin: 0 5px;
+            padding: 5px 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="controls">
+        <button onclick="changeLineStyle('horizontalFirst')">先橫後豎</button>
+        <button onclick="changeLineStyle('verticalFirst')">先豎後橫</button>
+        <button onclick="changeLineStyle('middlePoint')">中點轉角</button>
+        <button onclick="randomBoxPositions()">隨機位置</button>
+    </div>
+
+    <div class="container">
+        <div class="box" id="box1" style="left: 10px; top: 10px;">Box 1</div>
+        <div class="box" id="box2" style="left: 50px; top: 90px;">Box 2</div>
+        <svg id="svg-container"></svg>
+    </div>
+
+    <script>
+        let currentLineStyle = 'horizontalFirst';
+        
+        // 獲取元素中心點
+        function getElementCenter(element) {
+            const rect = element.getBoundingClientRect();
+            const containerRect = document.querySelector('.container').getBoundingClientRect();
+            
+            return {
+                x: rect.left - containerRect.left + rect.width / 2,
+                y: rect.top - containerRect.top + rect.height / 2
+            };
+        }
+
+        // 生成不同類型的路徑
+        function createPath(from, to, style) {
+            let path = '';
+            
+            switch(style) {
+                case 'horizontalFirst':
+                    // 先水平後垂直
+                    path = `M ${from.x} ${from.y} H ${to.x} V ${to.y}`;
+                    break;
+                    
+                case 'verticalFirst':
+                    // 先垂直後水平
+                    path = `M ${from.x} ${from.y} V ${to.y} H ${to.x}`;
+                    break;
+                    
+                case 'middlePoint':
+                    // 中點轉角（先到中點再分開）
+                    const midX = (from.x + to.x) / 2;
+                    const midY = (from.y + to.y) / 2;
+                    path = `M ${from.x} ${from.y} H ${midX} V ${midY} H ${to.x} V ${to.y}`;
+                    break;
+            }
+            
+            return path;
+        }
+
+        // 繪製連接線
+        function drawConnectionLine() {
+            const box1 = document.getElementById('box1');
+            const box2 = document.getElementById('box2');
+            const svg = document.getElementById('svg-container');
+            
+            const center1 = getElementCenter(box1);
+            const center2 = getElementCenter(box2);
+            
+            svg.innerHTML = '';
+            
+            // 創建主路徑
+            const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+            path.setAttribute('d', createPath(center1, center2, currentLineStyle));
+            path.setAttribute('stroke', '#2196F3');
+            path.setAttribute('stroke-width', '2');
+            path.setAttribute('fill', 'none');
+            path.setAttribute('stroke-linejoin', 'round');
+            
+            // 添加箭頭標記
+            const marker = document.createElementNS('http://www.w3.org/2000/svg', 'marker');
+            marker.setAttribute('id', 'arrowhead');
+            marker.setAttribute('viewBox', '0 0 10 10');
+            marker.setAttribute('refX', '8');
+            marker.setAttribute('refY', '5');
+            marker.setAttribute('markerWidth', '6');
+            marker.setAttribute('markerHeight', '6');
+            marker.setAttribute('orient', 'auto');
+            
+            const arrowPath = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+            arrowPath.setAttribute('d', 'M 0 0 L 10 5 L 0 10 z');
+            arrowPath.setAttribute('fill', '#2196F3');
+            marker.appendChild(arrowPath);
+            svg.appendChild(marker);
+            
+            path.setAttribute('marker-end', 'url(#arrowhead)');
+            svg.appendChild(path);
+            
+            // 添加轉角點圓圈（可選）
+            if (currentLineStyle === 'middlePoint') {
+                const midX = (center1.x + center2.x) / 2;
+                const midY = (center1.y + center2.y) / 2;
+                
+                const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+                circle.setAttribute('cx', midX);
+                circle.setAttribute('cy', midY);
+                circle.setAttribute('r', '4');
+                circle.setAttribute('fill', '#FF5722');
+                svg.appendChild(circle);
+            }
+        }
+
+        // 改變線條樣式
+        function changeLineStyle(style) {
+            currentLineStyle = style;
+            drawConnectionLine();
+        }
+
+        // 隨機改變box位置
+        function randomBoxPositions() {
+            const container = document.querySelector('.container');
+            const box1 = document.getElementById('box1');
+            const box2 = document.getElementById('box2');
+            
+            const maxX = container.clientWidth - 60;
+            const maxY = container.clientHeight - 40;
+            
+            box1.style.left = Math.random() * maxX + 'px';
+            box1.style.top = Math.random() * maxY + 'px';
+            
+            box2.style.left = Math.random() * maxX + 'px';
+            box2.style.top = Math.random() * maxY + 'px';
+            
+            drawConnectionLine();
+        }
+
+        // 使box可拖動
+        function makeDraggable(element) {
+            let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+            
+            element.onmousedown = dragMouseDown;
+            
+            function dragMouseDown(e) {
+                e = e || window.event;
+                e.preventDefault();
+                pos3 = e.clientX;
+                pos4 = e.clientY;
+                document.onmouseup = closeDragElement;
+                document.onmousemove = elementDrag;
+            }
+            
+            function elementDrag(e) {
+                e = e || window.event;
+                e.preventDefault();
+                pos1 = pos3 - e.clientX;
+                pos2 = pos4 - e.clientY;
+                pos3 = e.clientX;
+                pos4 = e.clientY;
+                
+                const newTop = element.offsetTop - pos2;
+                const newLeft = element.offsetLeft - pos1;
+                
+                // 限制在容器內
+                if (newTop >= 0 && newLeft >= 0) {
+                    element.style.top = newTop + "px";
+                    element.style.left = newLeft + "px";
+                }
+                
+                drawConnectionLine();
+            }
+            
+            function closeDragElement() {
+                document.onmouseup = null;
+                document.onmousemove = null;
+            }
+        }
+
+        // 初始化
+        makeDraggable(document.getElementById('box1'));
+        makeDraggable(document.getElementById('box2'));
+        drawConnectionLine();
+        
+        // 視窗大小變化時重新繪製
+        window.addEventListener('resize', drawConnectionLine);
+    </script>
+</body>
+</html>
