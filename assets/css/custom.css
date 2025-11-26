@@ -146,7 +146,7 @@ h6,
     position: relative;
 }
 
-#header .logo a {
+#header .logo a.tohome {
     display: block;
     position: absolute;
     color: #6e98ad;
@@ -159,13 +159,13 @@ h6,
 }
 
 #header .logo a[aria-expanded="true"],
-#header .logo:hover a,
+#header .logo a:hover,
 #header .logo.active a{
     color: #000;
 }
 
 #header .logo a[aria-expanded="true"]:before,
-#header .logo:hover a:before,
+#header .logo a:hover:before,
 #header .logo.active a:before {
     content: attr(data-storke);
     position: absolute;
