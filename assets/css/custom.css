@@ -301,8 +301,10 @@ h6,
 @media (max-width: 540px) {
     #header .logo,
     .header-scrolled #header .logo {
-        padding: 0 25px;
+        padding: 0;
         justify-content: left !important;
+        margin: 65px 0 60px 15px;
+        width: 40vw;
     }
     #header h1.title {
         font-size: 4.3vw;
@@ -3251,7 +3253,7 @@ ol > li {
     .mobile-nav .m_show {
         display: block !important;
     }
-    #header .logo a {
+    #header .logo a.tohome {
         display: none;
     }
 }
