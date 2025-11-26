@@ -516,7 +516,7 @@
 
             $('#history1').on('mouseover', '.h_link', function() {
                 var idex = $(this).attr('data-index');
-                console.log(idex);
+                //console.log(idex);
                 $('#svgAll .connection-svg path').eq(idex-1).addClass('black');
             });
             $('#history1').on('mouseout', '.h_link', function() {
@@ -592,7 +592,7 @@
                 var pathname = window.location.pathname;
                 var path1 = pathname.substring(0, pathname.lastIndexOf('/'));
                 var url = location.origin + path1 + $(this).attr('big');
-                console.log('url : '+ url);
+                //console.log('url : '+ url);
                 if($(this).attr('big') !== undefined){
                     window.open(url, '_blank').focus();
                 }
