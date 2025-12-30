@@ -2210,7 +2210,7 @@ ol > li {
         transform: scale(.65) translateX(-50%);
     }
     #history1 .pic3 {
-        top: 6061px;
+        top: 6813px;
         left: 39.3%;
         z-index: 19;
         transform: scale(.65) translateX(-50%);
@@ -2492,7 +2492,7 @@ ol > li {
     }
     #history1 .pic3 {
         left: 36%;
-        top: 6030px;
+        top: 6111px;
     }
     #history1 .h_link {
         min-height: 130px;
@@ -2501,8 +2501,8 @@ ol > li {
         font-size: 16px;
         height: 22px;
         line-height: 22px;
-        width: 50vw;
-        overflow: hidden;
+        max-width: 50vw;
+        text-overflow: ellipsis;
     }
     #history1 .period {
         font-size: 13px;
