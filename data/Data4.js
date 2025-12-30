@@ -3,7 +3,7 @@ var _Data = {
         "year": "Y1897",
         "date": "1897",
         "subject": {
-            "hospital": "新竹醫院時期",
+            "hospital": "新竹醫院",
             "title": "第<i>1</i>任 高桑範成",
             "period": "任期：明治29年(1897年)"
         },
@@ -13,8 +13,8 @@ var _Data = {
         "year": "Y1898",
         "date": "1898",
         "subject": {
-            "hospital": "新竹醫院時期",
-            "title": "第<i>2</i>任 何田守恭",
+            "hospital": "新竹醫院",
+            "title": "第<i>2</i>任 河田守恭",
             "period": "任期：明治30至37年(1898年至1905年)"
         },
         "sort": "1"
@@ -23,7 +23,7 @@ var _Data = {
         "year": "Y1905",
         "date": "1905",
         "subject": {
-            "hospital": "新竹醫院時期",
+            "hospital": "新竹醫院",
             "title": "第<i>3</i>任 蒲地佐惣太",
             "period": "任期：明治37年(1905年)"
         },
@@ -32,8 +32,8 @@ var _Data = {
     "04": {
         "date": "1905",
         "subject": {
-            "hospital": "新竹醫院時期",
-            "title": "第<i>4</i>任 芳墿鷹之助",
+            "hospital": "新竹醫院",
+            "title": "第<i>4</i>任 芳澤鷹之助",
             "period": "任期：明治37至39年(1905年至1907年)"
         },
         "sort": "1"
@@ -42,7 +42,7 @@ var _Data = {
         "year": "Y1907",
         "date": "1907",
         "subject": {
-            "hospital": "新竹醫院時期",
+            "hospital": "新竹醫院",
             "title": "第<i>5</i>任 蒲地佐惣太",
             "period": "任期：明治39至40年(1907年至1908年)"
         },
@@ -52,7 +52,7 @@ var _Data = {
         "year": "Y1908",
         "date": "1908",
         "subject": {
-            "hospital": "新竹醫院時期",
+            "hospital": "新竹醫院",
             "title": "第<i>6</i>任 松尾峰太郎",
             "period": "任期：明治40年至45年(1908年至1913年)"
         },
@@ -62,7 +62,7 @@ var _Data = {
         "year": "Y1913",
         "date": "1913",
         "subject": {
-            "hospital": "新竹醫院時期",
+            "hospital": "新竹醫院",
             "title": "第<i>7</i>任 中川幸庵",
             "period": "任期：大正2年至7年(1913年至1918年)"
         },
@@ -73,8 +73,8 @@ var _Data = {
         "year": "Y1913",
         "date": "1913",
         "subject": {
-            "hospital": "新竹醫院時期",
-            "title": "第<i>8</i>任 今井佑",
+            "hospital": "新竹醫院",
+            "title": "第<i>8</i>任 今井祐",
             "period": "任期：大正7年至9年(1918年至1920年)"
         },
         "sort": "1"
@@ -83,8 +83,8 @@ var _Data = {
         "year": "Y1920",
         "date": "1920",
         "subject": {
-            "hospital": "新竹醫院時期",
-            "title": "第<i>9</i>任 近藤喜",
+            "hospital": "新竹醫院",
+            "title": "第<i>9</i>任 近藤喜一",
             "period": "任期：大正9年至12年(1920年至1923年)"
         },
         "photos": [
@@ -97,8 +97,8 @@ var _Data = {
         "year": "Y1923",
         "date": "1923",
         "subject": {
-            "hospital": "新竹醫院時期",
-            "title": "第<i>10</i>任 小倉企作",
+            "hospital": "新竹醫院",
+            "title": "第<i>10</i>任 小倉金作",
             "period": "任期：大正12年至昭和3年(1923年至1928年)"
         },
         "sort": "1"
@@ -107,7 +107,7 @@ var _Data = {
         "year": "Y1928",
         "date": "1928",
         "subject": {
-            "hospital": "新竹醫院時期",
+            "hospital": "新竹醫院",
             "title": "第<i>11</i>任 森澤清",
             "period": "任期：昭和3年至6年(1928年至1931年)"
         },
@@ -121,7 +121,7 @@ var _Data = {
         "year": "Y1931",
         "date": "1931",
         "subject": {
-            "hospital": "新竹醫院時期",
+            "hospital": "新竹醫院",
             "title": "第<i>12</i>任 大井司",
             "period": "任期：昭和6年至7年(1931年至1932年)"
         },
@@ -135,7 +135,7 @@ var _Data = {
         "year": "Y1932",
         "date": "1932",
         "subject": {
-            "hospital": "新竹醫院時期",
+            "hospital": "新竹醫院",
             "title": "第<i>13</i>任 苗加寬三",
             "period": "任期：昭和7年至11年(1932年至1936年)"
         },
@@ -149,7 +149,7 @@ var _Data = {
         "year": "Y1936",
         "date": "1936",
         "subject": {
-            "hospital": "新竹醫院時期",
+            "hospital": "新竹醫院",
             "title": "第<i>14</i>任 佐藤敏",
             "period": "任期：昭和11年(1936年)"
         },
@@ -162,7 +162,7 @@ var _Data = {
     "15": {
         "date": "1936",
         "subject": {
-            "hospital": "新竹醫院時期",
+            "hospital": "新竹醫院",
             "title": "第<i>15</i>任 新免勝",
             "period": "任期：昭和12年至20年(1936年至1945年)"
         },
@@ -176,7 +176,7 @@ var _Data = {
         "year": "Y1945",
         "date": "1945",
         "subject": {
-            "hospital": "台灣省立新竹醫院時期",
+            "hospital": "台灣省立新竹醫院",
             "title": "第<i>1</i>任 翁啟煊 院長",
             "period": "任期：民國34年11月至35年7月"
         },
@@ -192,7 +192,7 @@ var _Data = {
         "year": "Y1946",
         "date": "1946",
         "subject": {
-            "hospital": "台灣省立新竹醫院時期",
+            "hospital": "台灣省立新竹醫院",
             "title": "第<i>2</i>任 蔡錫琴 院長",
             "period": "任期：民國35年7月至40年1月"
         },
@@ -208,7 +208,7 @@ var _Data = {
         "year": "Y1951",
         "date": "1951",
         "subject": {
-            "hospital": "台灣省立新竹醫院時期",
+            "hospital": "台灣省立新竹醫院",
             "title": "第<i>3</i>任 陳萬居 院長",
             "period": "任期：民國40年1月至41年7月"
         },
@@ -219,7 +219,7 @@ var _Data = {
         "year": "Y1952",
         "date": "1952",
         "subject": {
-            "hospital": "台灣省立新竹醫院時期",
+            "hospital": "台灣省立新竹醫院",
             "title": "第<i>4</i>任 許南陽 院長",
             "period": "任期：民國41年7月至55年5月"
         },
@@ -230,7 +230,7 @@ var _Data = {
         "year": "Y1952",
         "date": "1952",
         "subject": {
-            "hospital": "台灣省立新竹醫院時期",
+            "hospital": "台灣省立新竹醫院",
             "title": "第<i>5</i>任 黃東錄 院長",
             "period": "任期：民國55年5月至60年7月"
         },
@@ -241,7 +241,7 @@ var _Data = {
         "year": "Y1952",
         "date": "1952",
         "subject": {
-            "hospital": "台灣省立新竹醫院時期",
+            "hospital": "台灣省立新竹醫院",
             "title": "第<i>6</i>任 許太陽 院長",
             "period": "任期：民國60年7月至63年1月"
         },
@@ -257,7 +257,7 @@ var _Data = {
         "year": "Y1974",
         "date": "1974",
         "subject": {
-            "hospital": "台灣省立新竹醫院時期",
+            "hospital": "台灣省立新竹醫院",
             "title": "第<i>7</i>任 游天翔 院長",
             "period": "任期：民國63年1月至66年7月"
         },
@@ -273,7 +273,7 @@ var _Data = {
         "year": "Y1977",
         "date": "1977",
         "subject": {
-            "hospital": "台灣省立新竹醫院時期",
+            "hospital": "台灣省立新竹醫院",
             "title": "第<i>8</i>任 邱德魁 院長",
             "period": "任期：民國66年7月至71年5月"
         },
@@ -289,7 +289,7 @@ var _Data = {
         "year": "Y1982",
         "date": "1982",
         "subject": {
-            "hospital": "台灣省立新竹醫院時期",
+            "hospital": "台灣省立新竹醫院",
             "title": "第<i>9</i>任 李澤田 院長",
             "period": "任期：民國71年6月至78年5月"
         },
@@ -305,7 +305,7 @@ var _Data = {
         "year": "Y1989",
         "date": "1989",
         "subject": {
-            "hospital": "台灣省立新竹醫院時期",
+            "hospital": "台灣省立新竹醫院",
             "title": "第<i>10</i>任 王復蘇 院長",
             "period": "任期：民國78年5月至85年9月"
         },
@@ -321,7 +321,7 @@ var _Data = {
         "year": "Y1989",
         "date": "1989",
         "subject": {
-            "hospital": "台灣省立新竹醫院暨行政院衛生署新竹醫院時期",
+            "hospital": "台灣省立新竹醫院暨行政院衛生署新竹醫院",
             "title": "第<i>11</i>任 簡聰健 院長",
             "period": "任期：民國86年9月至92年10月"
         },
@@ -337,7 +337,7 @@ var _Data = {
         "year": "Y2003",
         "date": "2003",
         "subject": {
-            "hospital": "行政院衛生署新竹醫院時期",
+            "hospital": "行政院衛生署新竹醫院",
             "title": "第<i>12</i>任 張景年 院長",
             "period": "任期：民國92年10月至99年12月"
         },
@@ -353,7 +353,7 @@ var _Data = {
         "year": "Y2010",
         "date": "2010",
         "subject": {
-            "hospital": "行政院衛生署新竹醫院時期",
+            "hospital": "行政院衛生署新竹醫院",
             "title": "第<i>13</i>任 陳文鍾 院長",
             "period": "任期：民國99年12月至100年4月"
         },
@@ -369,7 +369,7 @@ var _Data = {
         "year": "Y2011",
         "date": "2011",
         "subject": {
-            "hospital": "國立臺灣大學醫學院附設醫院新竹分院時期",
+            "hospital": "國立臺灣大學醫學院附設醫院新竹分院",
             "title": "第<i>14</i>任 孫瑞昇 院長",
             "period": "任期：100年4月至104年7月"
         },
@@ -385,7 +385,7 @@ var _Data = {
         "year": "Y2015",
         "date": "2015",
         "subject": {
-            "hospital": "國立臺灣大學醫學院附設醫院新竹分院時期",
+            "hospital": "國立臺灣大學醫學院附設醫院新竹分院",
             "title": "第<i>15</i>任 洪冠予 院長",
             "period": "任期：104年8月至109年12月"
         },
@@ -401,7 +401,7 @@ var _Data = {
         "year": "Y1993",
         "date": "1993",
         "subject": {
-            "hospital": "臺灣省立竹東醫院時期",
+            "hospital": "臺灣省立竹東醫院",
             "title": "第<i>1</i>任 羅欽憲 院長",
             "period": "任期：82年7月1日至90年7月1日"
         },
@@ -417,7 +417,7 @@ var _Data = {
         "year": "Y1993",
         "date": "1993",
         "subject": {
-            "hospital": "行政院衛生署竹東醫院時期",
+            "hospital": "行政院衛生署竹東醫院",
             "title": "第<i>2</i>任 張景年 院長",
             "period": "任期：90年7月31日至91年7月2日"
         },
@@ -433,7 +433,7 @@ var _Data = {
         "year": "Y2004",
         "date": "2004",
         "subject": {
-            "hospital": "行政院衛生署竹東醫院時期",
+            "hospital": "行政院衛生署竹東醫院",
             "title": "第<i>3</i>任 簡聰健 院長",
             "period": "任期：91年7月3日至92年5月1日"
         },
@@ -449,7 +449,7 @@ var _Data = {
         "year": "Y2003",
         "date": "2003",
         "subject": {
-            "hospital": "行政院衛生署竹東醫院時期",
+            "hospital": "行政院衛生署竹東醫院",
             "title": "第<i>4</i>任 張世烈 院長",
             "period": "任期：92年5月2日至92年10月5日"
         },
@@ -464,7 +464,7 @@ var _Data = {
     "35": {
         "date": "2003",
         "subject": {
-            "hospital": "行政院衛生署竹東醫院時期",
+            "hospital": "行政院衛生署竹東醫院",
             "title": "第<i>5</i>任 施國正 院長",
             "period": "任期：92年10月6日至98年12月16日"
         },
@@ -480,7 +480,7 @@ var _Data = {
         "year": "Y2009",
         "date": "2009",
         "subject": {
-            "hospital": "行政院衛生署竹東醫院時期",
+            "hospital": "行政院衛生署竹東醫院",
             "title": "第<i>6</i>任 王文彥 院長",
             "period": "任期：98年12月17日至100年6月30日"
         },
@@ -496,7 +496,7 @@ var _Data = {
         "year": "Y2011",
         "date": "2011",
         "subject": {
-            "hospital": "國立臺灣大學醫學院附設醫院竹東分院時期",
+            "hospital": "國立臺灣大學醫學院附設醫院竹東分院",
             "title": "第<i>7</i>任 朱宗信 院長",
             "period": "任期：100年7月1日至101年7月31"
         },
@@ -507,7 +507,7 @@ var _Data = {
         "year": "Y2012",
         "date": "2012",
         "subject": {
-            "hospital": "國立臺灣大學醫學院附設醫院竹東分院時期",
+            "hospital": "國立臺灣大學醫學院附設醫院竹東分院",
             "title": "第<i>8</i>任 趙嘉倫 院長",
             "period": "任期：101年8月1日至102年7月31日"
         },
@@ -523,7 +523,7 @@ var _Data = {
         "year": "Y2014",
         "date": "2014",
         "subject": {
-            "hospital": "國立臺灣大學醫學院附設醫院竹東分院時期",
+            "hospital": "國立臺灣大學醫學院附設醫院竹東分院",
             "title": "第<i>9</i>任 王明鉅 院長",
             "period": "任期：102年8月1日104年7月31日"
         },
@@ -534,7 +534,7 @@ var _Data = {
         "year": "Y2015",
         "date": "2015",
         "subject": {
-            "hospital": "國立臺灣大學醫學院附設醫院竹東分院時期",
+            "hospital": "國立臺灣大學醫學院附設醫院竹東分院",
             "title": "第<i>10</i>任 詹鼎正 院長",
             "period": "任期：104年8月1日至109年12月31日"
         },

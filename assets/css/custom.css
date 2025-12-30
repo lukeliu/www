@@ -52,7 +52,7 @@ h6,
 }
 
 .hide{
-    display: none;
+    display: none !important;
 }
 
 @media (min-width: 1920px) {
@@ -1347,13 +1347,15 @@ ol > li {
 .otime {
     position: absolute;
     font-size: 33px;
+    line-height: 1.2em;
     font-weight: 500;
     color: #fff;
     background-color: #aaa;
-    padding: 15px 50px;
+    padding: 5px 50px;
     border-radius: 50px;
     border: 8px solid #fff;
     text-align: center;
+    min-height: 68px;
 }
 
 .otime:before {
@@ -2551,7 +2553,7 @@ ol > li {
     top: 301px;
 }
 .otime2.ot03 {
-    top: 850px;
+    top: 802px;
 }
 .otime2.ot04 {
     top: 1137px;
@@ -2564,17 +2566,17 @@ ol > li {
 .otime2.ot06 {
     background-color: #ccd34f;
     top: 881px;
-    transform: translate(-238%, -50%);
+    transform: translate(-238%, -117%);
 }
 .otime2.ot07 {
     background-color: #ccd34f;
     top: 1172px;
-    transform: translate(-286%, -50%);
+    transform: translate(-238%, -50%);
 }
 .otime2.ot08 {
     background-color: #efc062;
     top: 1275px;
-    transform: translate(160%, -50%);
+    transform: translate(160%, 157%);
 }
 .otime2.ot09 {
     color: #fff;
@@ -2590,8 +2592,9 @@ ol > li {
     padding: 30px 60px;
     border: 3px solid #8fc5b6;
     border-radius: 20px;
-    letter-spacing: 0.3em;
+    letter-spacing: 0.1em;
     font-weight: 500;
+    font-size: 32px;
 }
 
 .hinfo {
@@ -2630,7 +2633,7 @@ ol > li {
 }
 
 .hinfo[num="3"] {
-    top: 883px;
+    top: 833px;
 }
 
 .hinfo[num="4"] {
@@ -2646,7 +2649,7 @@ ol > li {
 .hinfo[num="6"] {
     border-color: #ccd34f;
     top: 984px;
-    transform: translate(-164%, -50%);
+    transform: translate(-164%, -74%);
 }
 
 .hinfo[num="7"] {
@@ -2658,7 +2661,7 @@ ol > li {
 .hinfo[num="8"] {
     border-color: #efc062;
     top: 1390px;
-    transform: translate(60%, -50%);
+    transform: translate(60%, 10%);
 }
 
 .hinfo[num="9"] {
