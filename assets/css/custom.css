@@ -2944,6 +2944,7 @@ ol > li {
         align-items: center;
         gap: 15px;
         padding-bottom: 40px;
+        max-width: 800px;
     }
     .hinfo[num="9"] {
         position: relative;
@@ -2988,6 +2989,13 @@ ol > li {
     }
     .hinfo[num="6"] h3 {
         transform: translate(-125%, -50%);
+    }
+}
+
+@media (max-width: 840px) {
+    .outline {
+        max-width: 95%;
+        border-radius: 5vw;
     }
 }
 
