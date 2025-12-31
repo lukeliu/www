@@ -1287,13 +1287,13 @@ ol > li {
 
 #history1 .pic2{
     position: absolute;
-    top: 1167px;
+    top: 3436px;
     left: 41%;
 }
 
 #history1 .pic3{
     position: absolute;
-    top: 14354px;
+    bottom: 52px;
     left: 60%;
 }
 
@@ -1319,8 +1319,24 @@ ol > li {
     font-weight: 500;
     color: #5f5f5f;
     background-color: #fff;
-    max-width: 300px;
     line-height: 1.2em;
+}
+
+#history1 .period i{
+    font-style: normal;
+}
+
+#history1 #item22 .period i,
+#history1 #item24 .period i,
+#history1 #item25 .period i,
+#history1 #item26 .period i,
+#history1 #item27 .period i,
+#history1 #item28 .period i,
+#history1 #item29 .period i,
+#history1 #item30 .period i,
+#history1 #item42 .period i {
+    display: block;
+    margin: 5px 0 0 40px;/*58*/
 }
 
 #history1 .title {
@@ -1348,7 +1364,7 @@ ol > li {
 
 .otime {
     position: absolute;
-    font-size: 33px;
+    font-size: 28px;
     line-height: 1.2em;
     font-weight: 500;
     color: #fff;
@@ -1357,7 +1373,7 @@ ol > li {
     border-radius: 50px;
     border: 8px solid #fff;
     text-align: center;
-    min-height: 68px;
+    min-height: 63px;
 }
 
 .otime:before {
@@ -1393,8 +1409,9 @@ ol > li {
     left: 17%;
 }
 .otime.ot06 {
-    top: 3310px;
-    left: 49%;
+    top: 3432px;
+    left: 25%;
+    font-size: 24px;
 }
 .otime.ot07 {
     top: 3685px;
@@ -1414,7 +1431,7 @@ ol > li {
 }
 .otime.ot11 {
     top: 6792px;
-    left: 35%;
+    left: 29%;
 }
 .otime.ot12 {
     top: 7563px;
@@ -1473,13 +1490,13 @@ ol > li {
 }
 
 #history1 .h_link .dean{
-    width: 250px;
+    width: 225px;
     height: auto;
     position: absolute;
 }
 
 #history1 .h_link .smallpic{
-    width: 160px;
+    width: 135px;
     height: auto;
     position: absolute;
 }
@@ -1537,32 +1554,48 @@ ol > li {
     left: 59.3%;
 }
 #history1 #item09.h_link .smallpic{
-    top: -34px;
-    left: -46.7%;
+    top: 27px;
+    left: -87.7%;
+}
+#item09 .dean{
+    top: -137px;
+    left: -63.5%;
 }
 #item10{
     top: 1995px;
     left: 59.3%;
 }
+#item10 .dean{
+    top: -137px;
+    left: -63.5%;
+}
 #item11{
-    top: 2240px;
-    left: 44.3%;
+    top: 2272px;
+    left: 29.3%;
 }
 #history1 #item11.h_link .point1 {
-    left: -11%;
-    top: -68px;
+    left: -20%;
+    top: -3px;
 }
 #history1 #item11.h_link .smallpic{
-    top: -27px;
-    left: -36.7%;
+    top: -74px;
+    left: -86.7%;
+}
+#item11 .dean {
+    top: -237px;
+    left: -63.5%;
 }
 #item12{
     top: 2459px;
     left: 29.3%;
 }
 #history1 #item12.h_link .smallpic{
-    top: -34px;
-    left: -46.7%;
+    top: 30px;
+    left: -86.7%;
+}
+#item12 .dean {
+    top: -137px;
+    left: -63.5%;
 }
 #item13{
     top: 2644px;
@@ -1573,19 +1606,19 @@ ol > li {
     left: -46.7%;
 }
 #item14{
-    top: 2953px;
+    top: 3044px;
     left: 61.7%;
 }
 #history1 #item14.h_link .smallpic{
-    top: -34px;
-    left: -46.7%;
+    top: 30px;
+    left: -86.7%;
 }
 #item14 .dean{
-    top: -173px;
-    left: 41.5%;
+    top: -137px;
+    left: -63.5%;
 }
 #item15{
-    top: 3132px;
+    top: 3232px;
     left: 61.7%;
 }
 #history1 #item15.h_link .smallpic{
@@ -1593,39 +1626,31 @@ ol > li {
     left: -46.7%;
 }
 #item16{
-    top: 3523px;
-    left: 47.7%;
-}
-#history1 #item16.h_link .point1 {
-    left: -11%;
-    top: -68px;
+    top: 3705px;
+    left: 27%;
 }
 #item16 .dean{
-    top: -173px;
-    left: 61.5%;
+    top: -137px;
+    left: -63.5%;
 }
 #history1 #item16.h_link .smallpic{
-    top: -81px;
-    left: 107.5%;
+    top: -43px;
+    left: -86.7%;
 }
 #item17{
-    top: 3693px;
-    left: 47.7%;
-}
-#history1 #item17.h_link .point1 {
-    left: -46%;
-    top: -233px;
+    top: 3929px;
+    left: 27%;
 }
 #item17 .dean{
-    top: -8px;
-    left: 61.5%;
+    top: -50px;
+    left: 81.5%;
 }
 #history1 #item17.h_link .smallpic{
-    top: 82px;
-    left: 107.5%;
+    top: 46px;
+    left: 118.5%;
 }
 #item18{
-    top: 3900px;
+    top: 4200px;
     left: 27%;
 }
 #item18 .dean{
@@ -1633,27 +1658,23 @@ ol > li {
     left: -63.5%;
 }
 #item19{
-    top: 4160px;
-    left: 27%;
+    top: 4594px;
+    left: 72%;
 }
 #item19 .dean{
     top: -80px;
-    left: 61.5%;
+    left: -63.5%;
 }
 #item20{
-    top: 4875px;
-    left: 47.7%;
-}
-#history1 #item20.h_link .point1 {
-    left: -11%;
-    top: -68px;
+    top: 4955px;
+    left: 40%;
 }
 #item20 .dean{
-    top: -173px;
-    left: 61.5%;
+    top: -80px;
+    left: -63.5%;
 }
 #item21{
-    top: 5307px;
+    top: 5287px;
     left: 40%;
 }
 #item21 .dean{
@@ -1665,24 +1686,24 @@ ol > li {
     left: -94.5%;
 }
 #item22{
-    top: 5661px;
-    left: 40%;
+    top: 5727px;
+    left: 35.5%;
 }
 #history1 #item22.h_link .point1 {
-    left: -11%;
-    top: -96px;
+    left: -3%;
+    top: -196px;
 }
 #item22 .dean{
     top: -26px;
-    left: -63.5%;
+    left: -50.5%;
 }
 #history1 #item22.h_link .smallpic{
     top: 64px;
-    left: -94.5%;
+    left: -81.5%;
 }
 #item23{
-    top: 5580px;
-    left: 66.7%;
+    top: 5660px;
+    left: 70.5%;
 }
 #history1 #item23.h_link .point1 {
     left: -25%;
@@ -1697,28 +1718,20 @@ ol > li {
     left: 42.5%;
 }
 #item24{
-    top: 6198px;
-    left: 47.2%;
-}
-#history1 #item24.h_link .point1 {
-    left: -17%;
-    top: -105px;
+    top: 6255px;
+    left: 31.2%;
 }
 #item24 .dean{
     top: -109px;
-    left: 61.5%;
+    left: 58.5%;
 }
 #history1 #item24.h_link .smallpic{
     top: -9px;
-    left: 105.5%;
+    left: 102.5%;
 }
 #item25{
-    top: 6500px;
-    left: 32.2%;
-}
-#history1 #item25.h_link .point1 {
-    left: -23.5%;
-    top: -4px;
+    top: 6540px;
+    left: 31.2%;
 }
 #item25 .dean{
     top: -101px;
@@ -2210,7 +2223,7 @@ ol > li {
         transform: scale(.65) translateX(-50%);
     }
     #history1 .pic3 {
-        top: 6813px;
+        bottom: 17px;
         left: 39.3%;
         z-index: 19;
         transform: scale(.65) translateX(-50%);
@@ -2229,7 +2242,7 @@ ol > li {
     .otime.ot08 {top: 2464px;}
     .otime.ot09 {top: 2661px;}
     .otime.ot10 {top: 2982px;}
-    .otime.ot11 {top: 3262px;}
+    .otime.ot11 {top: 3262px;left: -83px !important;}
     .otime.ot12 {top: 3411px;}
     .otime.ot13 {top: 3711px;}
     .otime.ot14 {top: 5258px;}
@@ -2285,6 +2298,10 @@ ol > li {
     }
     .btns {
         display: block;
+    }
+    #history1 .period i {
+        display: block;
+        margin: 5px 0 0 40px !important;
     }
 }
 
@@ -2367,10 +2384,12 @@ ol > li {
         display: flex;
         justify-content: center;
     }
+    .otime.ot11,
     .otime.ot13,
     .otime.ot14,
     .otime.ot16 {
         left: -16px !important;
+        background-color: #999;
     }
     .otime.ot15 {
         top: 5379px;
@@ -2492,7 +2511,6 @@ ol > li {
     }
     #history1 .pic3 {
         left: 36%;
-        top: 6111px;
     }
     #history1 .h_link {
         min-height: 130px;
