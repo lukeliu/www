@@ -3046,7 +3046,7 @@ ol > li {
         min-width: 95%;
     }
     .hinfo img {
-        max-width: auto;
+        max-width: 100%;
         width: 100%;
     }
     .hinfo[num="9"],
