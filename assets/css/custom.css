@@ -2607,6 +2607,7 @@ ol > li {
     }
     .info_history li {
         font-size: 18px;
+        background: url(../../images/icon_li.png) 0 9px no-repeat;
     }
 }
 
