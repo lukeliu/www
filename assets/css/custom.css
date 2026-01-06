@@ -2344,8 +2344,11 @@ ol > li {
         display: block;
     }
     #history1 .period i {
-        display: block;
-        margin: 5px 0 0 40px !important;
+        display: inline !important;
+        margin: 0 !important;
+    }
+    #history1 .h_link {
+        width: 60vw;
     }
 }
 
@@ -2443,6 +2446,9 @@ ol > li {
     .otime.ot16 {
         top: 5939px;
         padding: 50px 15px;
+    }
+    #history1 .h_link {
+        width: 85vw;
     }
 }
 
