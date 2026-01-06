@@ -614,6 +614,10 @@
             $(window).on('load resize', function() {
                 clearTimeout(resizeTimer);
                 resizeTimer = setTimeout(function() {
+                    if ($(window).width() < 600) {
+                        $('#svgAll .connection-svg path').remove();
+                        return;
+                    }
                     $('#hr_list .h_link').each(function(i){
                         var point1 = $(this).find('.point1');
                         var point2 = $(this).find('.hospital');
