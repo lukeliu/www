@@ -71,7 +71,7 @@
                         <div class="btn line_1" item="item01">新竹醫院</div>
                         <div class="btn line_2" item="item31">竹東醫院</div>
                         <div class="btn line_3" item="item41">新竹生醫園區分院</div>
-                        <div class="btn line_4" item="item42">臺大分院</div>
+                        <div class="btn line_4" item="item42">新竹臺大分院</div>
                     </div>
                     <div id="history1">
                         <div id="svgAll"><svg class="connection-svg"></svg></div>
@@ -258,45 +258,48 @@
                 //$svg.empty(); // 清空原有連線
                 const center1 = getElementCenter($el1);
                 const center2 = getElementCenter($el2);
-
-                // 創建SVG路徑的工具函數
-                function createPath(d) {
-                    const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
-                    path.setAttribute("d", d);
-                    path.setAttribute("id", "p-"+i);
-                    path.setAttribute("class", Line);
-                    return path;
-                }
-
-                var path1;
+                let d = '';
 
                 switch(style) {
                     case 'hv':
                         // 先橫後豎
-                        path1 = createPath(`M ${center1.x} ${center1.y} H ${center2.x} V ${center2.y}`);
+                        d = `M ${center1.x} ${center1.y} H ${center2.x} V ${center2.y}`;
                         break;
                         
                     case 'vh':
                         // 先豎後橫
-                        path1 = createPath(`M ${center1.x} ${center1.y} V ${center2.y} H ${center2.x}`);
+                        d = `M ${center1.x} ${center1.y} V ${center2.y} H ${center2.x}`;
                         break;
                         
                     case 'hvh':
                         // 先橫後豎再橫（中間中轉點）
                         var midX1 = (center1.x + center2.x) / 2;
-                        path1 = createPath(`M ${center1.x} ${center1.y} H ${midX1} V ${center2.y} H ${center2.x}`);
+                        d = `M ${center1.x} ${center1.y} H ${midX1} V ${center2.y} H ${center2.x}`;
                         break;
                         
                     case 'vhv':
                         // 先豎後橫再豎（中間中轉點）
                         var midY1 = (center1.y + center2.y) / 2;
-                        path1 = createPath(`M ${center1.x} ${center1.y} V ${midY1} H ${center2.x} V ${center2.y}`);
+                        d = `M ${center1.x} ${center1.y} V ${midY1} H ${center2.x} V ${center2.y}`;
                         break;
                 }
 
-                // 添加所有路徑到SVG
-                //console.log(path1);
-                $svg.append(path1);
+                // 檢查路徑是否存在，存在則更新，不存在則創建
+                const pathId = "p-" + i;
+                const existingPath = document.getElementById(pathId);
+
+                if (existingPath) {
+                    existingPath.setAttribute("d", d);
+                    if (existingPath.getAttribute("class") !== Line) {
+                        existingPath.setAttribute("class", Line);
+                    }
+                } else {
+                    const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+                    path.setAttribute("d", d);
+                    path.setAttribute("id", pathId);
+                    path.setAttribute("class", Line);
+                    $svg.append(path);
+                }
             }
 
             // 初始化繪製
@@ -607,27 +610,30 @@
                 return false;
             });
 
+            var resizeTimer;
             $(window).on('load resize', function() {
-                $('#svgAll .connection-svg path').remove();
-                $('#hr_list .h_link').each(function(i){
-                    var point1 = $(this).find('.point1');
-                    var point2 = $(this).find('.hospital');
-                    var style = 'hvh';
-                    var color = 'line1';
-                    if(i == 10 || i == 15 || i == 16 || i == 19 || i == 21 || i == 23 || i == 34 || i == 35 || i == 36 || i == 39){
-                        style = 'vh';
-                    }
-                    if(i > 29 && i < 40){
-                        color = 'line2';
-                    }
-                    if(i == 40){
-                        color = 'line3';
-                    }
-                    if(i > 40){
-                        color = 'line4';
-                    }
-                    connectionLines('#history1', point1, point2, color, style, i);
-                });
+                clearTimeout(resizeTimer);
+                resizeTimer = setTimeout(function() {
+                    $('#hr_list .h_link').each(function(i){
+                        var point1 = $(this).find('.point1');
+                        var point2 = $(this).find('.hospital');
+                        var style = 'hvh';
+                        var color = 'line1';
+                        if(i == 10 || i == 15 || i == 16 || i == 19 || i == 21 || i == 23 || i == 34 || i == 35 || i == 36 || i == 39){
+                            style = 'vh';
+                        }
+                        if(i > 29 && i < 40){
+                            color = 'line2';
+                        }
+                        if(i == 40){
+                            color = 'line3';
+                        }
+                        if(i > 40){
+                            color = 'line4';
+                        }
+                        connectionLines('#history1', point1, point2, color, style, i);
+                    });
+                }, 500);
             });
 
         });

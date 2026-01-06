@@ -94,7 +94,7 @@
                         <div class="btn line_1" item="item1">新竹醫院</div>
                         <div class="btn line_2" item="item2">竹東醫院</div>
                         <div class="btn line_3" item="item3">新竹生醫園區分院</div>
-                        <div class="btn line_4" item="item4">臺大分院</div>
+                        <div class="btn line_4" item="item4">新竹臺大分院</div>
                     </div>
                     <div id="history2">
                         <div id="svgAll2"><svg class="connection-svg"></svg></div>
@@ -241,7 +241,7 @@
                 const elHeight = $el.outerHeight();
                 
                 // 計算相對容器的坐標
-                console.log(elLeft);
+                //console.log(elLeft);
                 let elX = (elLeft - containerLeft) + elWidth / 2;
                 if (i == 5) {
                     elX = (elLeft - containerLeft) + elWidth / 4; // 錯開疊線
@@ -259,45 +259,49 @@
                 //$svg.empty(); // 清空原有連線
                 const center1 = getElementCenter($el1);
                 const center2 = getElementCenter($el2);
-
-                // 創建SVG路徑的工具函數
-                function createPath(d) {
-                    const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
-                    path.setAttribute("d", d);
-                    path.setAttribute("id", "p-"+i);
-                    path.setAttribute("class", Line);
-                    return path;
-                }
-
-                var path1;
+                let d = '';
 
                 switch(style) {
                     case 'hv':
                         // 先橫後豎
-                        path1 = createPath(`M ${center1.x} ${center1.y} H ${center2.x} V ${center2.y}`);
+                        d = `M ${center1.x} ${center1.y} H ${center2.x} V ${center2.y}`;
                         break;
                         
                     case 'vh':
                         // 先豎後橫
-                        path1 = createPath(`M ${center1.x} ${center1.y} V ${center2.y} H ${center2.x}`);
+                        d = `M ${center1.x} ${center1.y} V ${center2.y} H ${center2.x}`;
                         break;
                         
                     case 'hvh':
                         // 先橫後豎再橫（中間中轉點）
                         var midX1 = (center1.x + center2.x) / 2;
-                        path1 = createPath(`M ${center1.x} ${center1.y} H ${midX1} V ${center2.y} H ${center2.x}`);
+                        d = `M ${center1.x} ${center1.y} H ${midX1} V ${center2.y} H ${center2.x}`;
                         break;
                         
                     case 'vhv':
                         // 先豎後橫再豎（中間中轉點）
                         var midY1 = (center1.y + center2.y) / 2;
-                        path1 = createPath(`M ${center1.x} ${center1.y} V ${midY1} H ${center2.x} V ${center2.y}`);
+                        d = `M ${center1.x} ${center1.y} V ${midY1} H ${center2.x} V ${center2.y}`;
                         break;
                 }
 
-                // 添加所有路徑到SVG
-                //console.log(path1);
-                $svg.append(path1);
+                // 檢查路徑是否存在，存在則更新，不存在則創建
+                const pathId = "p-" + i;
+                const existingPath = document.getElementById(pathId);
+
+                if (existingPath) {
+                    existingPath.setAttribute("d", d);
+                    // 如果需要更新樣式
+                    if (existingPath.getAttribute("class") !== Line) {
+                        existingPath.setAttribute("class", Line);
+                    }
+                } else {
+                    const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+                    path.setAttribute("d", d);
+                    path.setAttribute("id", pathId);
+                    path.setAttribute("class", Line);
+                    $svg.append(path);
+                }
             }
 
             // 初始化繪製
@@ -314,19 +318,26 @@
                 return false;
             });
 
+            var resizeTimer;
             $(window).on('load resize', function() {
-                var winW = $(this).width();
-                $('#svgAll2 .connection-svg path').remove();
-                if(winW < 1670){
-                    connectionLines('#history2', '#item1', '.ot04', 'line1', 'vh', 1);
-                    connectionLines('#history2', '#item2', '.ot07', 'line2', 'vh', 2);
-                    connectionLines('#history2', '#item3', '#item4', 'line3', 'vh', 3);
-                    connectionLines('#history2', '#item4', '.ot10', 'line4', 'vh', 4);
-                    connectionLines('#history2', '.hinfo[num="9"]', '.ot10', 'line4', 'vh', 5);
-                    connectionLines('#history2', '.hinfo[num="10"]', '.ot10', 'line7', 'vh', 6);
-                    connectionLines('#history2', '.hinfo[num="4"]', '#item4', 'line5', 'vh', 5);
-                    connectionLines('#history2', '.hinfo[num="7"]', '#item4', 'line6', 'vh', 6);
-                }
+                clearTimeout(resizeTimer);
+                resizeTimer = setTimeout(function() {
+                    console.log('resize: '+$(window).width());
+                    var winW = $(window).width();
+                    if(winW < 1670){
+                        connectionLines('#history2', '#item1', '.ot04', 'line1', 'vh', 1);
+                        connectionLines('#history2', '#item2', '.ot07', 'line2', 'vh', 2);
+                        connectionLines('#history2', '#item3', '#item4', 'line3', 'vh', 3);
+                        connectionLines('#history2', '#item4', '.ot10', 'line4', 'vh', 4);
+                        connectionLines('#history2', '.hinfo[num="9"]', '.ot10', 'line4', 'vh', 5);
+                        connectionLines('#history2', '.hinfo[num="10"]', '.ot10', 'line7', 'vh', 6);
+                        connectionLines('#history2', '.hinfo[num="4"]', '#item4', 'line5', 'vh', 5);
+                        connectionLines('#history2', '.hinfo[num="7"]', '#item4', 'line6', 'vh', 6);
+                        connectionLines('#history2', '.ot10', '.outline', 'line4', 'vh', 7);
+                    } else {
+                        $('#svgAll2 .connection-svg path').remove();
+                    }
+                }, 500);
             });
         });
     </script>
