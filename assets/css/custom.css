@@ -2586,7 +2586,8 @@ ol > li {
         left: -50% !important;
         top: -10px !important;
     }
-    .successive_deans .btn {
+    .successive_deans .btn,
+    .academy_history .btn {
         font-size: 12px;
         box-shadow: 0 5px 5px -3px rgb(0 0 0 / 30%);
         padding: 8px;
@@ -2594,6 +2595,18 @@ ol > li {
     #history1 .h_link .point1 {
         left: -11.5% !important;
         top: -13px !important;
+    }
+    .info_history h2 {
+        font-size: 26px;
+    }
+    .info_history p {
+        font-size: 20px;
+    }
+    .info_history ul {
+        padding: 25px 15px;
+    }
+    .info_history li {
+        font-size: 18px;
     }
 }
 
