@@ -2175,9 +2175,9 @@ ol > li {
     text-align: center;
 }
 .btns .btn {
-    color: #fff;
+    color: #000;
     border: 1px solid #7f4f29;
-    background-color: #b38e6d;
+    background-color: #cf996e;
     transition: all .3s ease;
     box-shadow: 0 10px 10px -5px rgb(0 0 0 / 50%);
     margin-bottom: 10px;
@@ -2188,22 +2188,22 @@ ol > li {
 }
 .btns .line_1 {
     border-color: #7f4f29;
-    background-color: #b38e6d;
+    background-color: #cf996e;
 }
 .btns .line_2 {
-    color: #fff;
+    color: #000;
     border-color: #878b28;
-    background-color: #a8ae40;
+    background-color: #ccd34f;
 }
 .btns .line_3 {
-    color: #fff;
-    border-color: #704e0e;
-    background-color: #8f661b;
+    color: #000;
+    border-color: #bd923d;
+    background-color: #efc062;
 }
 .btns .line_4 {
-    color: #fff;
-    border-color: #1a5843;
-    background-color: #307c63;
+    color: #000;
+    border-color: #5b9786;
+    background-color: #8fc5b6;
 }
 
 .bg_white {
@@ -2594,7 +2594,7 @@ ol > li {
     .academy_history .btn {
         font-size: 12px;
         box-shadow: 0 5px 5px -3px rgb(0 0 0 / 30%);
-        padding: 8px;
+        padding: 8px 2.5vw;
     }
     #history1 .h_link .point1 {
         left: -11.5% !important;
@@ -2681,7 +2681,7 @@ ol > li {
     color: #fff;
     background-color: #8fc5b6;
     top: 1761px;
-    padding: 30px 60px;
+    padding: 15px 60px;
     border: 4px solid #fff;
 }
 .otime2.ot10 {
@@ -2948,22 +2948,26 @@ ol > li {
         transform: translate(-50%, -50%);
     }
     .otime2.ot09 {
-        top: 2076px;
+        top: 2163px;
+        z-index: 10;
     }
     .otime2.ot10 {
-        top: 2200px;
+        top: 2210px;
         max-width: 100%;
         font-size: 22px;
+        background-color: transparent;
+        border: none;
     }
     .outline {
-        top: 2353px;
-        height: 450px;
+        top: 2200px;
+        height: 530px;
         display: flex;
         flex-direction: column;
         flex-wrap: nowrap;
         justify-content: space-around;
         align-items: center;
         gap: 15px;
+        padding-top: 80px;
         padding-bottom: 40px;
         max-width: 800px;
     }
@@ -3026,7 +3030,7 @@ ol > li {
         padding: 15px 40px;
     }
     .otime2.ot10 {
-        padding: 15px 15px;
+        padding: 28px 15px;
         letter-spacing: 0;
         font-size: 18px;
     }
