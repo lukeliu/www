@@ -2624,7 +2624,7 @@ ol > li {
     position: relative;
     overflow: hidden;
     background: #fff url(../../images/timeline.png) center 50px no-repeat;
-    min-height: 2616px;
+    min-height: 2340px;
     transition: all .3s ease;
 }
 
@@ -2686,10 +2686,10 @@ ol > li {
 }
 .otime2.ot10 {
     color: #70b39f;
-    background-color: #fff;
-    top: 1900px;
+    background-color: transparent;
+    top: 1808px;
     padding: 30px 60px;
-    border: 3px solid #8fc5b6;
+    border: 3px solid transparent;
     border-radius: 20px;
     letter-spacing: 0.1em;
     font-weight: bold;
@@ -2768,20 +2768,20 @@ ol > li {
     border-radius: 40px;
     box-shadow: 0 0 20px#70b39f;
     background-color: #fff;
-    padding: 20px;
+    padding: 80px 20px 20px;
     position: absolute;
     left: 50%;
-    top: 2100px;
+    top: 1797px;
     transform: translateX(-50%);
     width: 1340px;
     max-width: 92%;
-    height: 300px;
+    height: 365px;
 }
 
 .hinfo[num="9"] {
     border-color: #70b39f;
     top: 50%;
-    transform: translate(-146%, -50%);
+    transform: translate(-146%, -38%);
     width: 434px;
     padding: 10px;
 }
@@ -2789,7 +2789,7 @@ ol > li {
 .hinfo[num="10"] {
     border-color: #70b39f;
     top: 50%;
-    transform: translate(-21%, -50%);
+    transform: translate(-21%, -38%);
     width: 800px;
     padding: 10px;
     overflow: visible;
