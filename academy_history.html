@@ -109,41 +109,53 @@
                             <h3>臺灣省立<br>新竹醫院</h3>
                             <img class="img-fluid" src="images/ah_img2.jpg" alt="">
                         </div>
+
+                        <div id="item2" class="otime2 ot05"><span>1993年7月1日成立</span></div>
+
+                        <div class="hinfo" num="5">
+                            <h3>臺灣省立<br>竹東醫院</h3>
+                            <img class="img-fluid" src="images/ah_img5.jpg" alt="">
+                        </div>
+
                         <div class="otime2 ot03"><span>1999年7月1日改隸</span></div>
+
                         <div class="hinfo" num="3">
                             <h3>行政院衛生署<br>新竹醫院</h3>
                             <img class="img-fluid" src="images/ah_img3.jpg" alt="">
                         </div>
+
                         <div class="otime2 ot04"><span>2011年7月1日改制</span></div>
+
                         <div class="hinfo" num="4">
                             <h3>國立臺灣大學<br>醫學院附設醫院<br>新竹分院</h3>
                             <img class="img-fluid" src="images/ah_img4.jpg" alt="">
                         </div>
 
-                        <div id="item2" class="otime2 ot05"><span>1993年7月1日成立</span></div>
-                        <div class="hinfo" num="5">
-                            <h3>臺灣省立<br>竹東醫院</h3>
-                            <img class="img-fluid" src="images/ah_img5.jpg" alt="">
-                        </div>
                         <div class="otime2 ot06"><span>1999年7月1日改隸</span></div>
+
                         <div class="hinfo" num="6">
                             <h3>行政院衛生署<br>竹東醫院</h3>
                             <img class="img-fluid" src="images/ah_img6.jpg" alt="">
                         </div>
+
                         <div class="otime2 ot07"><span>2011年7月1日改制</span></div>
+
                         <div class="hinfo" num="7">
                             <h3>國立臺灣大學<br>醫學院附設醫院<br>竹東分院</h3>
                             <img class="img-fluid" src="images/ah_img7.jpg" alt="">
                         </div>
 
                         <div id="item3" class="otime2 ot08"><span>2019年12月16日成立</span></div>
+
                         <div class="hinfo" num="8">
                             <h3>國立臺灣大學<br>醫學院附設醫院<br>新竹生醫園區分院</h3>
                             <img class="img-fluid" src="images/ah_img8.jpg" alt="">
                         </div>
 
                         <div id="item4" class="otime2 ot09"><span>2021年1月1日 三院整併</span></div>
+
                         <div class="otime2 ot10"><span>國立臺灣大學醫學院附設醫院新竹臺大分院</span></div>
+
                         <div class="outline">
                             <div class="hinfo" num="9">
                                 <h3>新竹醫院</h3>
@@ -242,8 +254,15 @@
                 
                 // 計算相對容器的坐標
                 //console.log(elLeft);
+                const winW = $(window).width();
                 let elX = (elLeft - containerLeft) + elWidth / 2;
-                if (i == 5) {
+                if (i == 3 && winW > 1150 && winW < 1670) {
+                    elX = (elLeft - containerLeft) + elWidth / 1.85; // 錯開疊線
+                }
+                if (i == 5 && winW > 1150 && winW < 1670) {
+                    elX = (elLeft - containerLeft) + elWidth / 2.2; // 錯開疊線
+                }
+                if (i == 5 & winW <= 1150) {
                     elX = (elLeft - containerLeft) + elWidth / 3; // 錯開疊線
                 }
                 if (i == 6) {
@@ -322,9 +341,15 @@
             $(window).on('load resize', function() {
                 clearTimeout(resizeTimer);
                 resizeTimer = setTimeout(function() {
-                    console.log('resize: '+$(window).width());
+                    //console.log('resize: '+$(window).width());
                     var winW = $(window).width();
-                    if(winW < 1670){
+                    if(winW < 1670 && winW > 1150){
+                        connectionLines('#history2', '#item1', '.ot04', 'line1', 'vh', 1);
+                        connectionLines('#history2', '#item2', '.ot07', 'line2', 'vh', 2);
+                        connectionLines('#history2', '.hinfo[num="8"]', '#item4', 'line3', 'vhv', 3);
+                        connectionLines('#history2', '.hinfo[num="4"]', '#item4', 'line1', 'vh', 4);
+                        connectionLines('#history2', '.hinfo[num="7"]', '#item4', 'line2', 'vhv', 5);
+                    } else if (winW <= 1150) {
                         connectionLines('#history2', '#item1', '.ot04', 'line1', 'vh', 1);
                         connectionLines('#history2', '#item2', '.ot07', 'line2', 'vh', 2);
                         connectionLines('#history2', '#item3', '#item4', 'line3', 'vh', 3);

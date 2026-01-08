@@ -2884,6 +2884,144 @@ ol > li {
         overflow-x: auto;
     }
     #history2 {
+        min-height: 2000px;
+    }
+    #svgAll2 {
+        background-color: rgb(255 255 255 / 75%);
+        z-index: 0;
+    }
+    .hinfo[num="1"] h3,    
+    .hinfo[num="2"] h3 {
+        transform: translate(-183%, -50%);
+    }   
+    .hinfo[num="3"] h3 {
+        transform: translate(-125%, -50%);
+    }
+    .otime2.ot02 {
+        top: 263px;
+    }
+    .hinfo[num="2"] {
+        top: 295px;
+    }
+    .otime2.ot03 {
+        top: 513px;
+    }
+    .hinfo[num="3"] {
+        top: 543px;
+    }
+    .otime2.ot04 {
+        top: 767px;
+    }
+    .hinfo[num="4"] {
+        top: 797px;
+    }
+    .otime2.ot05 {
+        top: 311px;
+        transform: translate(-235%, -50%);
+    }
+    .hinfo[num="5"] {
+        top: 398px;
+        transform: translate(-157%, -50%);
+    }
+    .otime2.ot06 {
+        top: 541px;
+        transform: translate(-235%, -50%);
+    }
+    .hinfo[num="6"] {
+        top: 628px;
+        transform: translate(-157%, -50%);
+    }
+    .otime2.ot07 {
+        top: 799px;
+        transform: translate(-235%, -50%);
+    }
+    .hinfo[num="7"] {
+        top: 885px;
+        transform: translate(-157%, -50%);
+    }
+    .otime2.ot08 {
+        top: 949px;
+        transform: translate(115%, -50%);
+    }
+    .hinfo[num="8"] {
+        top: 1035px;
+        transform: translate(57%, -50%);
+    }
+    .otime2.ot09 {
+        top: 1258px;
+        z-index: 10;
+    }
+    .otime2.ot10 {
+        top: 1305px;
+        max-width: 100%;
+        font-size: 22px;
+        background-color: transparent;
+        border: none;
+    }
+    .outline {
+        top: 1290px;
+        height: 530px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        align-items: center;
+        gap: 15px;
+        padding-top: 80px;
+        padding-bottom: 40px;
+        max-width: 800px;
+    }
+    .hinfo[num="9"] {
+        position: relative;
+        max-width: 424px;
+        transform: none;
+        width: calc(100% -20px);
+        left: auto;
+        top: auto;
+    }
+    .hinfo[num="10"] {
+        position: relative;
+        max-width: 424px;
+        transform: none;
+        width: calc(100% -20px);
+        left: auto;
+        top: auto;
+    }
+    .hinfo .htitle.ht1 {
+        transform: translate(-121%, 82%);
+    }
+    .hinfo .htitle.ht2 {
+        transform: translate(15%, 82%);
+    }
+    .remark {
+        bottom: 1%;
+        font-size: 16px;
+        width: 92%;
+        display: flex;
+        justify-content: center;
+    }
+    .hinfo img {
+        max-width: 400px;
+    }
+    .hinfo h3 {
+        font-size: 20px;
+    }
+    .otime2 {
+        font-size: 20px;
+    }
+    .hinfo[num="5"] h3 {
+        transform: translate(-183%, -50%);
+    }
+    .hinfo[num="6"] h3 {
+        transform: translate(-125%, -50%);
+    }
+}
+
+@media (max-width: 1150px) {
+    .academy_history .position-relative {
+        overflow-x: auto;
+    }
+    #history2 {
         min-height: 3000px;
     }
     #svgAll2 {
@@ -3044,7 +3182,7 @@ ol > li {
         display: none;
     }
     .outline {
-        height: 100vw;
+        height: fit-content;
     }
     .hinfo {
         min-width: 95%;
