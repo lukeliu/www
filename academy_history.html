@@ -163,8 +163,8 @@
                             </div>
                             <div class="hinfo" num="10">
                                 <h3>生醫醫院</h3>
-                                <div class="htitle ht1">竹東院區</div>
-                                <div class="htitle ht2">竹北院區</div>
+                                <div class="htitle ht1">竹北院區</div>
+                                <div class="htitle ht2">竹東院區</div>
                                 <img class="img-fluid" src="images/ah_img10.jpg" alt="">
                             </div>
                         </div>
@@ -242,7 +242,7 @@
             //$container2.append($svg);
 
             // 獲取元素中心座標（相對容器）
-            function getElementCenter($el) {
+            function getElementCenter($el, isEnd) {
                 const containerOffset = $container.offset();
                 const elOffset = $el.offset();
                 const containerLeft = containerOffset.left;
@@ -259,10 +259,10 @@
                 if (i == 3 && winW > 1150 && winW < 1670) {
                     elX = (elLeft - containerLeft) + elWidth / 1.85; // 錯開疊線
                 }
-                if (i == 5 && winW > 1150 && winW < 1670) {
+                if (i == 5 && winW > 1150 && winW < 1670 && isEnd) {
                     elX = (elLeft - containerLeft) + elWidth / 2.2; // 錯開疊線
                 }
-                if (i == 5 & winW <= 1150) {
+                if (i == 5 && winW <= 1150) {
                     elX = (elLeft - containerLeft) + elWidth / 3; // 錯開疊線
                 }
                 if (i == 6) {
@@ -276,8 +276,8 @@
             // 繪製所有連線
             function drawAllLines() {
                 //$svg.empty(); // 清空原有連線
-                const center1 = getElementCenter($el1);
-                const center2 = getElementCenter($el2);
+                const center1 = getElementCenter($el1, false);
+                const center2 = getElementCenter($el2, true);
                 let d = '';
 
                 switch(style) {
@@ -354,11 +354,9 @@
                         connectionLines('#history2', '#item2', '.ot07', 'line2', 'vh', 2);
                         connectionLines('#history2', '#item3', '#item4', 'line3', 'vh', 3);
                         connectionLines('#history2', '#item4', '.ot10', 'line4', 'vh', 4);
-                        connectionLines('#history2', '.hinfo[num="9"]', '.ot10', 'line4', 'vh', 5);
-                        connectionLines('#history2', '.hinfo[num="10"]', '.ot10', 'line7', 'vh', 6);
                         connectionLines('#history2', '.hinfo[num="4"]', '#item4', 'line5', 'vh', 5);
                         connectionLines('#history2', '.hinfo[num="7"]', '#item4', 'line6', 'vh', 6);
-                        connectionLines('#history2', '.ot10', '.outline', 'line4', 'vh', 7);
+                        connectionLines('#history2', '.ot10', '#item4', 'line4', 'vh', 7);
                     } else {
                         $('#svgAll2 .connection-svg path').remove();
                     }

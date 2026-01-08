@@ -2855,11 +2855,11 @@ ol > li {
 }
 
 .hinfo .htitle.ht1{
-    transform: translate(-165%, 95%);
+    transform: translate(-179%, 95%);
 }
 
 .hinfo .htitle.ht2{
-    transform: translate(65%, 95%);
+    transform: translate(83%, 95%);
 }
 
 .remark {
@@ -3126,10 +3126,10 @@ ol > li {
         top: auto;
     }
     .hinfo .htitle.ht1 {
-        transform: translate(-121%, 82%);
+        transform: translate(-127%, 82%);
     }
     .hinfo .htitle.ht2 {
-        transform: translate(15%, 82%);
+        transform: translate(27%, 82%);
     }
     .remark {
         bottom: 1%;
