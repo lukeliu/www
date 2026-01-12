@@ -262,12 +262,6 @@
                 if (i == 5 && winW > 1150 && winW < 1670 && isEnd) {
                     elX = (elLeft - containerLeft) + elWidth / 2.2; // 錯開疊線
                 }
-                if (i == 5 && winW <= 1150) {
-                    elX = (elLeft - containerLeft) + elWidth / 3; // 錯開疊線
-                }
-                if (i == 6) {
-                    elX = (elLeft - containerLeft) + elWidth / 1.5; // 錯開疊線
-                }
                 const elY = (elTop - containerTop) + elHeight / 2;
                 
                 return { x: elX, y: elY };
@@ -343,6 +337,7 @@
                 resizeTimer = setTimeout(function() {
                     //console.log('resize: '+$(window).width());
                     var winW = $(window).width();
+                    $('#svgAll2 .connection-svg path').remove();
                     if(winW < 1670 && winW > 1150){
                         connectionLines('#history2', '#item1', '.ot04', 'line1', 'vh', 1);
                         connectionLines('#history2', '#item2', '.ot07', 'line2', 'vh', 2);
@@ -350,15 +345,13 @@
                         connectionLines('#history2', '.hinfo[num="4"]', '#item4', 'line1', 'vh', 4);
                         connectionLines('#history2', '.hinfo[num="7"]', '#item4', 'line2', 'vhv', 5);
                     } else if (winW <= 1150) {
-                        connectionLines('#history2', '#item1', '.ot04', 'line1', 'vh', 1);
-                        connectionLines('#history2', '#item2', '.ot07', 'line2', 'vh', 2);
-                        connectionLines('#history2', '#item3', '#item4', 'line3', 'vh', 3);
-                        connectionLines('#history2', '#item4', '.ot10', 'line4', 'vh', 4);
-                        connectionLines('#history2', '.hinfo[num="4"]', '#item4', 'line5', 'vh', 5);
+                        connectionLines('#history2', '#item1', '.ot02', 'line1', 'vhv', 1);
+                        connectionLines('#history2', '#item2', '.ot06', 'line2', 'vhv', 2);
+                        connectionLines('#history2', '.ot06', '.ot07', 'line2', 'vhv', 3);
+                        connectionLines('#history2', '#item3', '#item4', 'line3', 'vh', 4);
+                        connectionLines('#history2', '.hinfo[num="3"]', '#item4', 'line5', 'vh', 5);
                         connectionLines('#history2', '.hinfo[num="7"]', '#item4', 'line6', 'vh', 6);
-                        connectionLines('#history2', '.ot10', '#item4', 'line4', 'vh', 7);
-                    } else {
-                        $('#svgAll2 .connection-svg path').remove();
+                        connectionLines('#history2', '.ot02', '.ot03', 'line5', 'vhv', 7);
                     }
                 }, 500);
             });

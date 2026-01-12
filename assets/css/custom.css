@@ -3022,7 +3022,7 @@ ol > li {
         overflow-x: auto;
     }
     #history2 {
-        min-height: 3000px;
+        min-height: 2650px;
     }
     #svgAll2 {
         background-color: rgb(255 255 255 / 75%);
@@ -3031,9 +3031,6 @@ ol > li {
     .hinfo[num="1"] h3,    
     .hinfo[num="2"] h3 {
         transform: translate(-183%, -50%);
-    }   
-    .hinfo[num="3"] h3 {
-        transform: translate(-125%, -50%);
     }
     .otime2.ot02 {
         top: 263px;
@@ -3042,62 +3039,142 @@ ol > li {
         top: 295px;
     }
     .otime2.ot03 {
-        top: 513px;
+        top: 768px;
+        transform: translateX(-108%);
+        font-size: 16px;
+        padding: 10px 15px;
     }
     .hinfo[num="3"] {
-        top: 543px;
+        top: 800px;
+        min-width: 0;
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        width: 190px;
+        height: 250px;
+        justify-content: flex-end;
+        transform: translateX(-106%);
+    }
+    .hinfo[num="3"] h3 {
+        transform: translate(-45%, -173%);
+        width: 73%;
+    }
+    .hinfo[num="3"] .img-fluid {
+        margin-left: -67%;
+        width: 400px;
+        max-width: 170%;
     }
     .otime2.ot04 {
-        top: 767px;
+        top: 1102px;
+        transform: translateX(-108%);
+        font-size: 16px;
+        padding: 10px 15px;
     }
     .hinfo[num="4"] {
-        top: 797px;
+        top: 1135px;
+        min-width: 0;
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        width: 190px;
+        height: 250px;
+        justify-content: flex-end;
+        transform: translateX(-106%);
+    }
+    .hinfo[num="4"] h3 {
+        transform: translate(-45%, -130%);
+        width: 86%;
+    }
+    .hinfo[num="4"] .img-fluid {
+        margin-left: -67%;
+        width: 400px;
+        max-width: 170%;
     }
     .otime2.ot05 {
-        top: 1056px;
+        top: 546px;
         transform: translate(-50%, -50%);
     }
     .hinfo[num="5"] {
-        top: 1141px;
+        top: 628px;
         transform: translate(-50%, -50%);
     }
     .otime2.ot06 {
-        top: 1314px;
-        transform: translate(-50%, -50%);
+        top: 768px;
+        transform: translateX(7%);
+        font-size: 16px;
+        padding: 10px 15px;
     }
     .hinfo[num="6"] {
-        top: 1400px;
-        transform: translate(-50%, -50%);
+        top: 800px;
+        min-width: 0;
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        width: 190px;
+        height: 250px;
+        justify-content: flex-end;
+        transform: translateX(5%);
+    }
+    .hinfo[num="6"] h3 {
+        transform: translate(-45%, -173%);
+        width: 73%;
+    }
+    .hinfo[num="6"] .img-fluid {
+        margin-left: -67%;
+        width: 400px;
+        max-width: 170%;
     }
     .otime2.ot07 {
-        top: 1573px;
-        transform: translate(-50%, -50%);
+        top: 1102px;
+        transform: translateX(7%);
+        font-size: 16px;
+        padding: 10px 15px;
     }
     .hinfo[num="7"] {
-        top: 1659px;
-        transform: translate(-50%, -50%);
+        top: 1135px;
+        min-width: 0;
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        width: 190px;
+        height: 250px;
+        justify-content: flex-end;
+        transform: translateX(5%);
+    }
+    .hinfo[num="7"] h3 {
+        transform: translate(-48%, -130%);
+        width: 86%;
+    }
+    .hinfo[num="7"] .img-fluid {
+        margin-left: -67%;
+        width: 400px;
+        max-width: 170%;
     }
     .otime2.ot08 {
-        top: 1834px;
+        top: 1534px;
         transform: translate(-50%, -50%);
     }
     .hinfo[num="8"] {
-        top: 1922px;
+        top: 1622px;
         transform: translate(-50%, -50%);
     }
     .otime2.ot09 {
-        top: 2163px;
+        top: 1863px;
         z-index: 10;
     }
     .otime2.ot10 {
-        top: 2210px;
+        top: 1910px;
         max-width: 100%;
         font-size: 22px;
         background-color: transparent;
         border: none;
     }
     .outline {
-        top: 2200px;
+        top: 1900px;
         height: 530px;
         display: flex;
         flex-direction: column;
@@ -3149,9 +3226,6 @@ ol > li {
     }
     .hinfo[num="5"] h3 {
         transform: translate(-183%, -50%);
-    }
-    .hinfo[num="6"] h3 {
-        transform: translate(-125%, -50%);
     }
 }
 
