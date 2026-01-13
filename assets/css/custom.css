@@ -3040,9 +3040,6 @@ ol > li {
     }
     .otime2.ot03 {
         top: 768px;
-        transform: translateX(-108%);
-        font-size: 16px;
-        padding: 10px 15px;
     }
     .hinfo[num="3"] {
         top: 800px;
@@ -3051,10 +3048,12 @@ ol > li {
         display: flex;
         flex-direction: column;
         flex-wrap: nowrap;
-        width: 190px;
+        width: 196px;
         height: 250px;
         justify-content: flex-end;
-        transform: translateX(-106%);
+        transform: translateX(-100%);
+        border-width: 2px 0 2px 2px !important;
+        border-radius: 30px 0 0 30px;
     }
     .hinfo[num="3"] h3 {
         transform: translate(-45%, -173%);
@@ -3067,9 +3066,6 @@ ol > li {
     }
     .otime2.ot04 {
         top: 1102px;
-        transform: translateX(-108%);
-        font-size: 16px;
-        padding: 10px 15px;
     }
     .hinfo[num="4"] {
         top: 1135px;
@@ -3078,10 +3074,12 @@ ol > li {
         display: flex;
         flex-direction: column;
         flex-wrap: nowrap;
-        width: 190px;
+        width: 196px;
         height: 250px;
         justify-content: flex-end;
-        transform: translateX(-106%);
+        transform: translateX(-100%);
+        border-width: 2px 0 2px 2px !important;
+        border-radius: 30px 0 0 30px;
     }
     .hinfo[num="4"] h3 {
         transform: translate(-45%, -130%);
@@ -3102,9 +3100,7 @@ ol > li {
     }
     .otime2.ot06 {
         top: 768px;
-        transform: translateX(7%);
-        font-size: 16px;
-        padding: 10px 15px;
+        display: none;
     }
     .hinfo[num="6"] {
         top: 800px;
@@ -3113,10 +3109,12 @@ ol > li {
         display: flex;
         flex-direction: column;
         flex-wrap: nowrap;
-        width: 190px;
+        width: 195px;
         height: 250px;
         justify-content: flex-end;
-        transform: translateX(5%);
+        transform: translateX(0);
+        border-width: 2px 2px 2px 0 !important;
+        border-radius: 0 30px 30px 0;
     }
     .hinfo[num="6"] h3 {
         transform: translate(-45%, -173%);
@@ -3129,9 +3127,7 @@ ol > li {
     }
     .otime2.ot07 {
         top: 1102px;
-        transform: translateX(7%);
-        font-size: 16px;
-        padding: 10px 15px;
+        display: none;
     }
     .hinfo[num="7"] {
         top: 1135px;
@@ -3140,10 +3136,12 @@ ol > li {
         display: flex;
         flex-direction: column;
         flex-wrap: nowrap;
-        width: 190px;
+        width: 195px;
         height: 250px;
         justify-content: flex-end;
-        transform: translateX(5%);
+        transform: translateX(0);
+        border-width: 2px 2px 2px 0 !important;
+        border-radius: 0 30px 30px 0;
     }
     .hinfo[num="7"] h3 {
         transform: translate(-48%, -130%);
@@ -3228,7 +3226,7 @@ ol > li {
         transform: translate(-183%, -50%);
     }
     .hinfo {
-        border: 3px solid #ffc000 !important;
+        border: 3px solid #e27900 !important;
     }
     .otime2 {
         background-color: #ffc000 !important;
@@ -3241,7 +3239,8 @@ ol > li {
         border-color: #70b39f !important;
     }
     .outline {
-        box-shadow: 0 0 20px #ffc000 !important;
+        border: 3px solid #e27900 !important;
+        box-shadow: none !important;
     }
     .otime2.ot09 {
         color: #000;
