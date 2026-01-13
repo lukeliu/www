@@ -3227,6 +3227,25 @@ ol > li {
     .hinfo[num="5"] h3 {
         transform: translate(-183%, -50%);
     }
+    .hinfo {
+        border: 3px solid #ffc000 !important;
+    }
+    .otime2 {
+        background-color: #ffc000 !important;
+    }
+    .otime2.ot10 {
+        background-color: transparent !important;
+    }
+    .hinfo[num="9"],
+    .hinfo[num="10"] {
+        border-color: #70b39f !important;
+    }
+    .outline {
+        box-shadow: 0 0 20px #ffc000 !important;
+    }
+    .otime2.ot09 {
+        color: #000;
+    }
 }
 
 @media (max-width: 840px) {
