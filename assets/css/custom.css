@@ -3239,6 +3239,7 @@ ol > li {
     }
     .otime2.ot10 {
         background-color: transparent !important;
+        border: transparent !important;
     }
     .hinfo[num="9"],
     .hinfo[num="10"] {
