@@ -2145,7 +2145,7 @@ ol > li {
 }
 .line8 { 
     stroke: #aaa; 
-    stroke-width: 2px; 
+    stroke-width: 3px; 
     fill: none; 
 }
 #history2 .line1,
@@ -3057,7 +3057,7 @@ ol > li {
         height: 250px;
         justify-content: flex-end;
         transform: translateX(-100%);
-        border-width: 2px 0 2px 2px !important;
+        border-width: 3px 0 3px 3px !important;
         border-radius: 30px 0 0 30px;
     }
     .hinfo[num="3"] h3 {
@@ -3083,7 +3083,7 @@ ol > li {
         height: 250px;
         justify-content: flex-end;
         transform: translateX(-100%);
-        border-width: 2px 0 2px 2px !important;
+        border-width: 3px 0 3px 3px !important;
         border-radius: 30px 0 0 30px;
     }
     .hinfo[num="4"] h3 {
@@ -3118,7 +3118,7 @@ ol > li {
         height: 250px;
         justify-content: flex-end;
         transform: translateX(0);
-        border-width: 2px 2px 2px 0 !important;
+        border-width: 3px 3px 3px 0 !important;
         border-radius: 0 30px 30px 0;
     }
     .hinfo[num="6"] h3 {
@@ -3145,7 +3145,7 @@ ol > li {
         height: 250px;
         justify-content: flex-end;
         transform: translateX(0);
-        border-width: 2px 2px 2px 0 !important;
+        border-width: 3px 3px 3px 0 !important;
         border-radius: 0 30px 30px 0;
     }
     .hinfo[num="7"] h3 {
@@ -3231,11 +3231,11 @@ ol > li {
         transform: translate(-183%, -50%);
     }
     .hinfo {
-        border: 2px solid #aaa !important;
+        border: 3px solid #aaa !important;
     }
     .otime2 {
         background-color: #ffc000 !important;
-        border: 2px solid #aaa !important;
+        border: 3px solid #aaa !important;
     }
     .otime2.ot10 {
         background-color: transparent !important;
@@ -3246,7 +3246,7 @@ ol > li {
         border-color: #70b39f !important;
     }
     .outline {
-        border: 2px solid #aaa !important;
+        border: 3px solid #aaa !important;
         box-shadow: none !important;
     }
     .otime2.ot09 {
