@@ -2143,6 +2143,11 @@ ol > li {
     stroke-dasharray: 2.5,15;
     stroke-linecap: round;
 }
+.line8 { 
+    stroke: #aaa; 
+    stroke-width: 7px; 
+    fill: none; 
+}
 #history2 .line1,
 #history2 .line2,
 #history2 .line3,
@@ -3229,7 +3234,7 @@ ol > li {
         border: 3px solid #aaa !important;
     }
     .otime2 {
-        background-color: #ffc000 !important;
+        background-color: #aaa !important;
     }
     .otime2.ot10 {
         background-color: transparent !important;
