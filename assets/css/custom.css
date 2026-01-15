@@ -2144,7 +2144,7 @@ ol > li {
     stroke-linecap: round;
 }
 .line8 { 
-    stroke: #aaa; 
+    stroke: #c8bfe7; 
     stroke-width: 3px; 
     fill: none; 
 }
@@ -3231,11 +3231,12 @@ ol > li {
         transform: translate(-183%, -50%);
     }
     .hinfo {
-        border: 3px solid #aaa !important;
+        border: 3px solid #c8bfe7 !important;
     }
     .otime2 {
-        background-color: #ffc000 !important;
-        border: 3px solid #aaa !important;
+        background-color: #c8bfe7 !important;
+        border: 3px solid #c8bfe7 !important;
+        color: #000;
     }
     .otime2.ot10 {
         background-color: transparent !important;
@@ -3246,7 +3247,7 @@ ol > li {
         border-color: #70b39f !important;
     }
     .outline {
-        border: 3px solid #aaa !important;
+        border: 3px solid #c8bfe7 !important;
         box-shadow: none !important;
     }
     .otime2.ot09 {
