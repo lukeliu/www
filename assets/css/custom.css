@@ -2455,6 +2455,9 @@ ol > li {
     #history1 .h_link {
         width: 85vw;
     }
+    .otime {
+        display: none;
+    }
 }
 
 @media (max-width: 580px) {
