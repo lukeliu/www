@@ -2320,9 +2320,11 @@ ol > li {
         border-left: 5px solid #c58f63;
         border-right: none;
     }
-    #history1 .sort_1 .h_link.hasPic,
-    #history1 .sort_3 .h_link.hasPic {
+    #history1 .sort_1 .h_link.hasPic {
         padding: 130px 30px 50px 0;
+    }
+    #history1 .sort_3 .h_link.hasPic {
+        padding: 130px 30px 200px 20px;
     }
     #history1 .sort_1 .h_link.hasPic.default {
         padding: 10px 0 50px 30px;
@@ -2552,7 +2554,7 @@ ol > li {
     }
     #item41 .hospital,
     #item41 .period {
-        width: 85%;
+        width: 95%;
     }
 }
 
@@ -2740,15 +2742,30 @@ ol > li {
     #history1 .pic3 {
         left: 47%;
     }
+    #history1 .sort_2 .h_link.hasPic {
+        padding: 130px 0 50px 15px;
+    }
     #history1 .sort_3 .h_link.hasPic {
-        padding: 130px 10px 50px 0;
+        padding: 130px 10px 200px 0;
+    }
+    #history1 .sort_1 #item26.h_link.hasPic {
+        padding: 130px 15px 1121px 0;
+    }
+    #history1 .sort_1 #item29.h_link.hasPic {
+        padding: 130px 15px 807px 0;
+    }
+    #history1 .sort_2 #item31.h_link.hasPic {
+        padding: 130px 0 350px 15px;
     }
     .otime.ot11 {
         top: 7291px;
         width: 400px;
     }
-    #history1 .sort_1 #item26.h_link.hasPic {
-        padding: 130px 30px 1121px 0;
+    .otime.ot15 {
+        top: 10581px;
+    }
+    .otime.ot16 {
+        top: 12162px;
     }
 }
 
