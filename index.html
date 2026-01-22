@@ -96,7 +96,12 @@
                         <div class="otime ot15"><span>民國110年<br>三院整併</span></div>
                         <div class="otime ot16"><span>民國115年</span></div>
                         
-                        <ul id="hr_list"></ul>
+                        <div id="hr_list">
+                            <ul class="sort_1"></ul>
+                            <ul class="sort_2"></ul>
+                            <ul class="sort_3"></ul>
+                            <ul class="sort_4"></ul>
+                        </div>
                     </div>
                     <!-- <div id="float_nav" class="niceScroll"></div> -->
                 </div>
@@ -361,18 +366,20 @@
                         smallpic = 'data/Official/4/'+ smallpic;
                     }
                     var sort = 'sort' + dbData['sort'];
+                    var sortDiv = '.sort_' + dbData['sort'];
+                    
                     
                     if(dean.length > 0){
                         if(smallpic.length > 0){
-                            $('#hr_list').append('<li id="item'+ tindex +'" class="h_link pointer '+ sort +'" data-toggle="modal" data-target="#showModal" data-index="'+ tindex +'"><div class="point1"></div><span class="hospital">'+ hospital +'</span><span class="title">'+ title +'</span><span class="period">'+ period +'</span><img class="dean" src="'+ dean +'.webp" alt="'+ title +'"><img class="smallpic" src="'+ smallpic +'_s.webp" alt="'+ title +'"></li>');
+                            $('#hr_list '+ sortDiv).append('<li id="item'+ tindex +'" class="h_link pointer '+ sort +' hasPic" data-toggle="modal" data-target="#showModal" data-index="'+ tindex +'"><div class="point1"></div><span class="hospital">'+ hospital +'</span><span class="title">'+ title +'</span><span class="period">'+ period +'</span><img class="dean" src="'+ dean +'.webp" alt="'+ title +'"><img class="smallpic" src="'+ smallpic +'_s.webp" alt="'+ title +'"></li>');
                         }else{
-                            $('#hr_list').append('<li id="item'+ tindex +'" class="h_link '+ sort +'" data-index="'+ tindex +'"><div class="point1"></div><span class="hospital">'+ hospital +'</span><span class="title">'+ title +'</span><span class="period">'+ period +'</span><img class="dean" src="'+ dean +'.webp" alt="'+ title +'"></li>');                            
+                            $('#hr_list '+ sortDiv).append('<li id="item'+ tindex +'" class="h_link '+ sort +' hasPic" data-index="'+ tindex +'"><div class="point1"></div><span class="hospital">'+ hospital +'</span><span class="title">'+ title +'</span><span class="period">'+ period +'</span><img class="dean" src="'+ dean +'.webp" alt="'+ title +'"></li>');                            
                         }
                     }else{
                         if(smallpic.length > 0){
-                            $('#hr_list').append('<li id="item'+ tindex +'" class="h_link pointer '+ sort +'" data-toggle="modal" data-target="#showModal" data-index="'+ tindex +'"><div class="point1"></div><span class="hospital">'+ hospital +'</span><span class="title">'+ title +'</span><span class="period">'+ period +'</span><img class="smallpic" src="'+ smallpic +'_s.webp" alt="'+ title +'"></li>');
+                            $('#hr_list '+ sortDiv).append('<li id="item'+ tindex +'" class="h_link pointer '+ sort +' hasPic" data-toggle="modal" data-target="#showModal" data-index="'+ tindex +'"><div class="point1"></div><span class="hospital">'+ hospital +'</span><span class="title">'+ title +'</span><span class="period">'+ period +'</span><img class="smallpic" src="'+ smallpic +'_s.webp" alt="'+ title +'"></li>');
                         }else{
-                            $('#hr_list').append('<li id="item'+ tindex +'" class="h_link '+ sort +'" data-index="'+ tindex +'"><div class="point1"></div><span class="hospital">'+ hospital +'</span><span class="title">'+ title +'</span><span class="period">'+ period +'</span></li>');
+                            $('#hr_list '+ sortDiv).append('<li id="item'+ tindex +'" class="h_link '+ sort +'" data-index="'+ tindex +'"><div class="point1"></div><span class="hospital">'+ hospital +'</span><span class="title">'+ title +'</span><span class="period">'+ period +'</span></li>');
                         }
                     }
             }
@@ -485,6 +492,7 @@
             }
 
             SetListHTML();
+            $('#hr_list .sort_1 .h_link:lt(25)').addClass('default');
 
             $(window).on('load resize scroll', function() {
                 var wW = parseInt($(window).width());
@@ -614,7 +622,21 @@
             $(window).on('load resize', function() {
                 clearTimeout(resizeTimer);
                 resizeTimer = setTimeout(function() {
-                    if ($(window).width() < 600) {
+                    if ($(window).width() < 1775) {
+                        $('#hr_list .sort_2, #hr_list .sort_3, #hr_list .sort_4').css('top', '');
+                        $('#history1').css('min-height', '');
+
+                        var sort2 = $('#item25').position().top;
+                        var sort3 = $('#history1 .sort_2').position().top - $('#hr_list .sort_3').height();
+                        var sort4 = $('#history1 .sort_3').position().top;
+                        var left4 = $('#history1 .otime.ot15').position().left + $('#history1 .otime.ot15').width()/2 - 23;
+                        $('#hr_list .sort_2').css('top', sort2 + 170);
+                        $('#hr_list .sort_3').css('top', sort3 + -20);
+                        $('#hr_list .sort_4').css({'top': (sort4 + 20), 'left': left4});
+                        
+                        var sortHeight = $('#history1 .sort_4').position().top + $('#history1 .sort_4').height();
+                        $('#history1').css('min-height', sortHeight + 100);
+
                         $('#svgAll .connection-svg path').remove();
                         return;
                     }
