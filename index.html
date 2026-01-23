@@ -621,10 +621,12 @@
             var resizeTimer;
             $(window).on('load resize', function() {
                 clearTimeout(resizeTimer);
+
+                $('#hr_list .sort_2, #hr_list .sort_3, #hr_list .sort_4').css('top', '');
+                $('#history1').css('min-height', '');
+                
                 resizeTimer = setTimeout(function() {
                     if ($(window).width() < 1775) {
-                        $('#hr_list .sort_2, #hr_list .sort_3, #hr_list .sort_4').css('top', '');
-                        $('#history1').css('min-height', '');
 
                         var sort2 = $('#item25').position().top;
                         var sort3 = $('#history1 .sort_2').position().top - $('#hr_list .sort_3').height();
