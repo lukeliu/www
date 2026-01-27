@@ -263,29 +263,35 @@
                 //$svg.empty(); // 清空原有連線
                 const center1 = getElementCenter($el1);
                 const center2 = getElementCenter($el2);
+
+                // 爲了繪製清晰的線條，將座標強制取整數，配合 shape-rendering="crispEdges" 可避免模糊
+                const x1 = Math.floor(center1.x);
+                const y1 = Math.floor(center1.y);
+                const x2 = Math.floor(center2.x);
+                const y2 = Math.floor(center2.y);
                 let d = '';
 
                 switch(style) {
                     case 'hv':
                         // 先橫後豎
-                        d = `M ${center1.x} ${center1.y} H ${center2.x} V ${center2.y}`;
+                        d = `M ${x1} ${y1} H ${x2} V ${y2}`;
                         break;
-                        
+
                     case 'vh':
                         // 先豎後橫
-                        d = `M ${center1.x} ${center1.y} V ${center2.y} H ${center2.x}`;
+                        d = `M ${x1} ${y1} V ${y2} H ${x2}`;
                         break;
-                        
+
                     case 'hvh':
                         // 先橫後豎再橫（中間中轉點）
-                        var midX1 = (center1.x + center2.x) / 2;
-                        d = `M ${center1.x} ${center1.y} H ${midX1} V ${center2.y} H ${center2.x}`;
+                        const midX1 = Math.floor((center1.x + center2.x) / 2);
+                        d = `M ${x1} ${y1} H ${midX1} V ${y2} H ${x2}`;
                         break;
-                        
+
                     case 'vhv':
                         // 先豎後橫再豎（中間中轉點）
-                        var midY1 = (center1.y + center2.y) / 2;
-                        d = `M ${center1.x} ${center1.y} V ${midY1} H ${center2.x} V ${center2.y}`;
+                        const midY1 = Math.floor((center1.y + center2.y) / 2);
+                        d = `M ${x1} ${y1} V ${midY1} H ${x2} V ${y2}`;
                         break;
                 }
 
@@ -295,6 +301,7 @@
 
                 if (existingPath) {
                     existingPath.setAttribute("d", d);
+                    existingPath.setAttribute("shape-rendering", "crispEdges");
                     if (existingPath.getAttribute("class") !== Line) {
                         existingPath.setAttribute("class", Line);
                     }
@@ -302,6 +309,7 @@
                     const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
                     path.setAttribute("d", d);
                     path.setAttribute("id", pathId);
+                    path.setAttribute("shape-rendering", "crispEdges");
                     path.setAttribute("class", Line);
                     $svg.append(path);
                 }
