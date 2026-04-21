@@ -1491,6 +1491,39 @@ ol > li {
     background: url(../../images/point4.png) 0 0 no-repeat;
 }
 
+#history1 .h_link .dean_info span{
+    font-size: 12px;
+    position: absolute;
+    top: 127px;
+    left: -135px;
+    display: block;
+    text-align: left;
+    width: 95px;
+    line-height: 1.5;
+}
+
+@media (min-width: 1775px) {
+    #history1 .h_link .dean_info span{
+        top: 127px;
+        left: -355px;
+        width: auto;
+    }
+    #history1 #item07.h_link .dean_info span {
+        top: 187px;
+    }
+    #history1 #item09.h_link .dean_info span {
+        top: -156px;
+    }
+}
+
+@media (max-width: 580px) {
+    #history1 .h_link .dean_info span{
+        top: 124px;
+        left: -110px;
+        width: 68px;
+    }
+}
+
 #history1 .h_link .dean{
     width: 225px;
     height: auto;

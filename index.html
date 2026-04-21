@@ -367,6 +367,13 @@
                     }else{
                         dean = 'data/Official/4/'+ dean;
                     }
+
+                    var source = dbData['source'];
+                    if(source == undefined){
+                        source = '';
+                    }else{
+                        source = '圖片來源：' + source;
+                    }
                     var smallpic = dbData['smallpic'];
                     if(smallpic == undefined){
                         smallpic = '';
@@ -379,9 +386,9 @@
                     
                     if(dean.length > 0){
                         if(smallpic.length > 0){
-                            $('#hr_list '+ sortDiv).append('<li id="item'+ tindex +'" class="h_link pointer '+ sort +' hasPic" data-toggle="modal" data-target="#showModal" data-index="'+ tindex +'"><div class="point1"></div><span class="hospital">'+ hospital +'</span><span class="title">'+ title +'</span><span class="period">'+ period +'</span><img class="dean" src="'+ dean +'.webp" alt="'+ title +'"><img class="smallpic" src="'+ smallpic +'_s.webp" alt="'+ title +'"></li>');
+                            $('#hr_list '+ sortDiv).append('<li id="item'+ tindex +'" class="h_link pointer '+ sort +' hasPic" data-toggle="modal" data-target="#showModal" data-index="'+ tindex +'"><div class="point1"></div><span class="hospital">'+ hospital +'</span><span class="title">'+ title +'</span><span class="period">'+ period +'</span><div class="dean_info"><img class="dean" src="'+ dean +'.webp" alt="'+ title +'"><span>'+ source +'</span></div><img class="smallpic" src="'+ smallpic +'_s.webp" alt="'+ title +'"></li>');
                         }else{
-                            $('#hr_list '+ sortDiv).append('<li id="item'+ tindex +'" class="h_link '+ sort +' hasPic" data-index="'+ tindex +'"><div class="point1"></div><span class="hospital">'+ hospital +'</span><span class="title">'+ title +'</span><span class="period">'+ period +'</span><img class="dean" src="'+ dean +'.webp" alt="'+ title +'"></li>');                            
+                            $('#hr_list '+ sortDiv).append('<li id="item'+ tindex +'" class="h_link '+ sort +' hasPic" data-index="'+ tindex +'"><div class="point1"></div><span class="hospital">'+ hospital +'</span><span class="title">'+ title +'</span><span class="period">'+ period +'</span><div class="dean_info"><img class="dean" src="'+ dean +'.webp" alt="'+ title +'"><span>'+ source +'</span></div></li>');                            
                         }
                     }else{
                         if(smallpic.length > 0){
