@@ -1512,7 +1512,10 @@ ol > li {
         top: 187px;
     }
     #history1 #item09.h_link .dean_info span {
-        top: -156px;
+        top: 120px;
+    }
+    #history1 #item11.h_link .dean_info span {
+        top: 26px;
     }
 }
 
@@ -1571,6 +1574,10 @@ ol > li {
 #item07{
     top: 1290px;
     left: 27.5%;
+}
+#history1 #item07.h_link .smallpic{
+    top: 85px;
+    left: -84.7%;
 }
 #item07 .dean{
     top: -80px;
