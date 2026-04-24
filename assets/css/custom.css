@@ -2729,7 +2729,7 @@ ol > li {
         text-overflow: ellipsis;
     }
     #history1 .period {
-        font-size: 15px;
+        font-size: 14px;
         height: 22px;
         line-height: 22px;
     }
@@ -2813,7 +2813,7 @@ ol > li {
         padding: 130px 0 306px 15px;
     }
     #history1 .sort_2 #item40.h_link.hasPic {
-        padding: 130px 0 600px 15px;
+        padding: 130px 0 585px 15px;
     }
     #history1 .sort_1 #item26.h_link.hasPic {
         padding: 130px 15px 1121px 0;
@@ -3506,6 +3506,26 @@ ol > li {
     .hinfo img {
         max-width: 100%;
         width: 100%;
+    }
+    #history1 .h_link.sort1 .point1,    
+    #history1 .h_link.sort2 .point1,    
+    #history1 .h_link.sort3 .point1,    
+    #history1 .h_link.sort4 .point1 {
+        background-size: 75%;
+        background-origin: content-box;
+    }
+    #history1 .sort_1 .h_link.default .point1 {
+        right: auto !important;
+        left: -21.3px !important;
+    }
+    #history1 .sort_1 .h_link .point1,
+    #history1 .sort_3 .h_link .point1{
+        left: auto !important;
+        right: -31.3px !important;
+    }
+    #history1 .sort_2 .h_link .point1,
+    #history1 .sort_4 .h_link .point1{
+        left: -20.3px !important;
     }
 }
 
