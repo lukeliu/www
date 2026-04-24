@@ -2328,10 +2328,10 @@ ol > li {
         transform: scale(.65) translateX(-50%);
     }
     #history1 .pic3 {
-        bottom: 17px;
+        bottom: 24px;
         left: 49%;
         z-index: 19;
-        transform: scale(.65) translateX(-50%);
+        transform: scale(.5) translateX(-50%);
     }
     .otime {
         transform: translateX(-50%) scale(.65);
@@ -2389,7 +2389,7 @@ ol > li {
         padding: 10px 0 300px 30px;
     }
     #history1 .sort_1 #item25.h_link.hasPic.default {
-        padding: 10px 0 200px 30px;
+        padding: 10px 0 250px 30px;
     }
     #history1 .sort_1 #item26.h_link.hasPic {
         padding: 130px 30px 1107px 0;
@@ -2413,7 +2413,7 @@ ol > li {
         padding: 130px 0 600px 30px;
     }
     #history1 .sort_4 #item46.h_link.hasPic {
-        padding: 130px 0 250px 30px;
+        padding: 130px 0 250px 15px;
     }
     #history1 .h_link.sort2 {
         border-left: 5px solid #bdc53c;
@@ -2448,9 +2448,12 @@ ol > li {
         position: absolute;
         left: 46.2%;
     }
-    #hr_list .sort_2 .h_link,
+    #hr_list .sort_2 .h_link{
+        left: 2%;
+    }
     #hr_list .sort_4 .h_link{
         left: 2%;
+        padding-left: 15px;
     }
     #svgAll {
         background-color: rgb(255 255 255 / 100%);
@@ -2532,7 +2535,7 @@ ol > li {
     }
     #history1 .h_link.hasPic {
         height: 300px;
-        max-height: 300px;
+        max-height: 350px;
     }
 }
 
@@ -2721,6 +2724,7 @@ ol > li {
         font-size: 16px;
         height: 22px;
         line-height: 22px;
+        width: 40vw;
         max-width: 50vw;
         text-overflow: ellipsis;
     }
@@ -2730,7 +2734,7 @@ ol > li {
         line-height: 22px;
     }
     #history1 .title {
-        font-size: 18px;
+        font-size: 17px;
         height: auto;
         line-height: 22px;
     }
@@ -2796,13 +2800,20 @@ ol > li {
         left: 46.8%;
     }
     #history1 .pic3 {
-        left: 47%;
+        left: 42%;
     }
     #history1 .sort_2 .h_link.hasPic {
         padding: 130px 0 50px 15px;
+        width: 50vw;
     }
     #history1 .sort_3 .h_link.hasPic {
-        padding: 130px 10px 200px 0;
+        padding: 130px 10px 230px 0;
+    }
+    #history1 .sort_2 #item36.h_link.hasPic {
+        padding: 130px 0 306px 15px;
+    }
+    #history1 .sort_2 #item40.h_link.hasPic {
+        padding: 130px 0 600px 15px;
     }
     #history1 .sort_1 #item26.h_link.hasPic {
         padding: 130px 15px 1121px 0;
@@ -2811,10 +2822,10 @@ ol > li {
         padding: 130px 15px 807px 0;
     }
     #history1 .sort_2 #item31.h_link.hasPic {
-        padding: 130px 0 350px 15px;
+        padding: 130px 0 400px 15px;
     }
     .otime.ot11 {
-        top: 7291px;
+        top: 7329px;
         width: 400px;
     }
     .otime.ot15 {
