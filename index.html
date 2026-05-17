@@ -528,18 +528,18 @@
 
             $(window).on('click', '.h_link', function() {
                 index = $(this).attr('data-index');
+                var domIdx = $('#hr_list .h_link').index(this);
                 $('#svgAll .connection-svg path').removeClass('black');
-                $('#svgAll .connection-svg path').eq(i-1).addClass('black');
+                $('#svgAll .connection-svg path').eq(domIdx).addClass('black');
             });
 
             $('#history1').on('mouseover', '.h_link', function() {
-                var idex = $(this).attr('data-index');
-                //console.log(idex);
-                $('#svgAll .connection-svg path').eq(idex-1).addClass('black');
+                var domIdx = $('#hr_list .h_link').index(this);
+                $('#svgAll .connection-svg path').eq(domIdx).addClass('black');
             });
             $('#history1').on('mouseout', '.h_link', function() {
-                var idex = $(this).attr('data-index');
-                $('#svgAll .connection-svg path').eq(idex-1).removeClass('black');
+                var domIdx = $('#hr_list .h_link').index(this);
+                $('#svgAll .connection-svg path').eq(domIdx).removeClass('black');
             });
 
             $('#List_Photo').on('click', '.photo', function(e) {
