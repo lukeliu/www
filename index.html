@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 
 <head>
@@ -69,9 +69,9 @@
                 <div class="position-relative">
                     <div class="btns">
                         <div class="btn line_1" item="item01">新竹醫院</div>
-                        <div class="btn line_2" item="item31">竹東醫院</div>
-                        <div class="btn line_3" item="item41">新竹生醫園區分院</div>
-                        <div class="btn line_4" item="item42">新竹臺大分院</div>
+                        <div class="btn line_2" item="item33">竹東醫院</div>
+                        <div class="btn line_3" item="item43">新竹生醫園區分院</div>
+                        <div class="btn line_4" item="item44">新竹臺大分院</div>
                     </div>
                     <div id="history1">
                         <div id="svgAll"><svg class="connection-svg"></svg></div>
@@ -84,18 +84,20 @@
                         <div class="otime ot03 hide"><span>民國元年</span></div>
                         <div class="otime ot04 hide"><span>民國10年</span></div>
                         <div class="otime ot05 hide"><span>民國20年</span></div>
-                        <div class="otime ot06"><span>臺灣省立時期<br><small>(光復後時期)</small></span></div>
+                        <div class="otime ot06"><span>臺灣省立醫院時期<br><small>(光復後時期)</small></span></div>
                         <div class="otime ot07 hide"><span>民國40年</span></div>
                         <div class="otime ot08 hide"><span>民國50年</span></div>
                         <div class="otime ot09 hide"><span>民國60年</span></div>
                         <div class="otime ot10 hide"><span>民國70年</span></div>
-                        <div class="otime ot11"><span>行政院衛生署時期</span></div>
+                        <div class="otime ot11"><span>行政院衛生署醫院時期</span></div>
                         <div class="otime ot12 hide"><span>民國90年</span></div>
                         <div class="otime ot13"><span>臺大醫院時期</span></div>
                         <div class="otime ot14"><span>民國108年</span></div>
                         <div class="otime ot15"><span>民國110年<br>三院整併</span></div>
-                        <div class="otime ot16"><span>民國115年</span></div>
-                        
+                        <div class="otime ot16"><span>民國111年</span></div>
+                        <div class="otime ot17"><span>民國114年</span></div>
+                        <div class="otime ot18"><span>民國115年</span></div>
+
                         <div id="hr_list">
                             <ul class="sort_1"></ul>
                             <ul class="sort_2"></ul>
@@ -216,7 +218,7 @@
             const $container2 = $('#svgAll');
             const $el1 = $(selector1);
             const $el2 = $(selector2);
-            const f_right = [37, 38, 41];
+            const f_right = [38, 39, 42];
             
             // 移除已有SVG避免重複
             //$container2.find('svg.connection-svg').remove();
@@ -241,10 +243,10 @@
                 if (elWidth > 48) {
                     elX = elLeft - containerLeft; // 寬度超48px時取左邊界
                 }
-                if (i == 42) {
+                if (i == 43 || i == 36) {
                     elX = (elLeft - containerLeft) + elWidth / 2; // 錯開疊線
                 }
-                if (i == 43 || i == 32) {
+                if (i == 44 || i == 33) {
                     elX = (elLeft - containerLeft) + elWidth / 3.5; // 錯開疊線
                 }
                 for(var j = 0; j < f_right.length; j++){
@@ -334,7 +336,7 @@
             }
             var TYear = getUrlVal('hr');
             var toshow = getUrlVal('toshow');
-            var len = Object.keys(_Data).length;
+            var len = _Data.length;
 
             if($(".niceScroll").length > 0){
                 $(".niceScroll").niceScroll({
@@ -347,14 +349,8 @@
             // Desc : 設定歷史河流的內容
             function SetListHTML() {
                 var w_len = 0;
-                for(var i = 1; i <= len; i++) {
-                    var tindex = '';
-                    if(i < 10){
-                        tindex = '0' + i.toString();
-                    }else{
-                        tindex = i.toString();
-                    }
-                    var dbData = _Data[tindex];
+                _Data.forEach(function(dbData) {
+                    var tindex = dbData.id;
                     var year = '';
                     var time = dbData['date'];
                     var hospital = dbData['subject']['hospital'];
@@ -397,8 +393,7 @@
                             $('#hr_list '+ sortDiv).append('<li id="item'+ tindex +'" class="h_link '+ sort +'" data-index="'+ tindex +'"><div class="point1"></div><span class="hospital">'+ hospital +'</span><span class="title">'+ title +'</span><span class="period">'+ period +'</span></li>');
                         }
                     }
-            }
-                
+                });
             }
             function toSHOW(){
                 $('#hr_list .h_link').each(function() {
@@ -428,12 +423,15 @@
             // Func : SetData
             // Desc : 設定文物資訊面板的內容
             function SetData(thisIndex, arrow) {
-                //console.log('thisIndex: '+thisIndex);
-                index = thisIndex;
-                var dbData = _Data[index];
+                var arrayIdx = _Data.findIndex(item => item.id === thisIndex);
+                if (arrayIdx === -1) arrayIdx = 0;
+                
+                var dbData = _Data[arrayIdx];
+                index = dbData.id;
+
                 function pass_event() {
                     // 添加类型检查和默认值
-                    if (typeof index === 'undefined') index = '00';
+                    if (typeof index === 'undefined') index = '01';
                     if (typeof len === 'undefined') len = 0;
                     
                     //console.log('index: ' + index);
@@ -450,20 +448,14 @@
                             return true;
                         }
                         
-                        // 處理索引切換邏輯
-                        let currentIndex = parseInt(index, 10);
-                        
+
                         if (arrow === 'left') {
-                            currentIndex = (currentIndex === 0) ? len : currentIndex - 1;
+                            arrayIdx = (arrayIdx <= 0) ? _Data.length - 1 : arrayIdx - 1;
                         } else {
-                            currentIndex = (currentIndex >= len) ? 0 : currentIndex + 1;
+                            arrayIdx = (arrayIdx >= _Data.length - 1) ? 0 : arrayIdx + 1;
                         }
-                        
-                        // 格式化索引爲兩位數
-                        index = currentIndex.toString().padStart(2, '0');
-                        
-                        // 獲取新數據
-                        dbData = _Data[index];
+                        dbData = _Data[arrayIdx];
+                        index = dbData.id;
                     }
                     
                     console.error('Max attempts reached, no valid data found');
@@ -576,7 +568,7 @@
 
             $('#showModal').on('shown.bs.modal', function(event) {
                 var num = $(event.relatedTarget);
-                index = num.data("index");
+                index = num.attr('data-index');
                 // console.log('index : '+index);
                 SetData(index, 'default');
             });
@@ -642,11 +634,14 @@
                 
                 resizeTimer = setTimeout(function() {
                     if ($(window).width() < 1775) {
-
+                        var gap = 31;
+                        if ($(window).width() < 580) {
+                            gap = 23;
+                        }
                         var sort2 = $('#item25').position().top;
                         var sort3 = $('#history1 .sort_2').position().top - $('#hr_list .sort_3').height();
                         var sort4 = $('#history1 .sort_3').position().top;
-                        var left4 = $('#history1 .otime.ot15').position().left + $('#history1 .otime.ot15').width()/2 - 23;
+                        var left4 = $('#history1 .otime.ot15').position().left + $('#history1 .otime.ot15').width()/2 - gap;
                         $('#hr_list .sort_2').css('top', sort2 + 170);
                         $('#hr_list .sort_3').css('top', sort3 + -18);
                         $('#hr_list .sort_4').css({'top': (sort4 + 20), 'left': left4});
@@ -662,16 +657,16 @@
                         var point2 = $(this).find('.hospital');
                         var style = 'hvh';
                         var color = 'line1';
-                        if(i == 10 || i == 15 || i == 16 || i == 19 || i == 21 || i == 23 || i == 34 || i == 35 || i == 36 || i == 39){
+                        if(i == 10 || i == 15 || i == 16 || i == 19 || i == 21 || i == 23 || i == 35 || i == 37 || i == 40){
                             style = 'vh';
                         }
-                        if(i > 29 && i < 40){
+                        if(i > 29 && i < 41){
                             color = 'line2';
                         }
-                        if(i == 40){
+                        if(i == 41){
                             color = 'line3';
                         }
-                        if(i > 40){
+                        if(i > 41){
                             color = 'line4';
                         }
                         connectionLines('#history1', point1, point2, color, style, i);

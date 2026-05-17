@@ -1,4 +1,4 @@
-/*--------------------------------------------------------------
+﻿/*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
 
@@ -1332,11 +1332,11 @@ ol > li {
 #history1 #item24 .period i,
 #history1 #item25 .period i,
 #history1 #item26 .period i,
-#history1 #item27 .period i,
-#history1 #item28 .period i,
 #history1 #item29 .period i,
 #history1 #item30 .period i,
-#history1 #item42 .period i {
+#history1 #item31 .period i,
+#history1 #item32 .period i,
+#history1 #item44 .period i {
     display: block;
     margin: 5px 0 0 40px;/*58*/
 }
@@ -1459,6 +1459,18 @@ ol > li {
     border-radius: 76px;
 }
 .otime.ot16 {
+    top: 13039px;
+    left: 38%;
+    background-color: #7c9996;
+    padding: 15px 50px;
+}
+.otime.ot17 {
+    top: 13501px;
+    left: 8.5%;
+    background-color: #7c9996;
+    padding: 15px 50px;
+}
+.otime.ot18 {
     top: 14075px;
     left: 43.5%;
     background-color: #7c9996;
@@ -1784,27 +1796,27 @@ ol > li {
     left: 102.5%;
 }
 #item26{
-    top: 7200px;
+    top: 6659px;
     left: 12%;
 }
 #history1 #item26.h_link .point1 {
-    left: 87%;
-    top: -3px;
+    left: 80%;
+    top: 41px;
 }
 #item26 .dean{
     top: -315px;
-    left: 25.5%;
+    left: -0.5%;
 }
 #history1 #item26.h_link .smallpic{
     top: -221px;
     left: -2.5%;
 }
 #item27{
-    top: 8200px;
+    top: 7200px;
     left: 12%;
 }
 #history1 #item27.h_link .point1 {
-    left: 86%;
+    left: 87%;
     top: -3px;
 }
 #item27 .dean{
@@ -1816,12 +1828,12 @@ ol > li {
     left: -2.5%;
 }
 #item28{
-    top: 9200px;
+    top: 7200px;
     left: 12%;
 }
 #history1 #item28.h_link .point1 {
-    left: 86%;
-    top: -4px;
+    left: 87%;
+    top: -3px;
 }
 #item28 .dean{
     top: -315px;
@@ -1832,7 +1844,7 @@ ol > li {
     left: -2.5%;
 }
 #item29{
-    top: 9700px;
+    top: 8200px;
     left: 12%;
 }
 #history1 #item29.h_link .point1 {
@@ -1848,12 +1860,12 @@ ol > li {
     left: -2.5%;
 }
 #item30{
-    top: 10400px;
+    top: 9200px;
     left: 12%;
 }
 #history1 #item30.h_link .point1 {
     left: 86%;
-    top: -3px;
+    top: -4px;
 }
 #item30 .dean{
     top: -315px;
@@ -1864,60 +1876,60 @@ ol > li {
     left: -2.5%;
 }
 #item31{
-    top: 7118px;
-    left: 50.5%;
+    top: 9700px;
+    left: 12%;
 }
 #history1 #item31.h_link .point1 {
-    left: -23.5%;
-    top: -133px;
+    left: 86%;
+    top: -3px;
 }
 #item31 .dean{
-    top: -300px;
-    left: -0.5%;
+    top: -315px;
+    left: 25.5%;
 }
 #history1 #item31.h_link .smallpic{
-    top: -125px;
-    left: 42.5%;
+    top: -221px;
+    left: -2.5%;
 }
 #item32{
-    top: 7654px;
-    left: 50.5%;
+    top: 10400px;
+    left: 12%;
 }
 #history1 #item32.h_link .point1 {
-    left: -22%;
+    left: 86%;
     top: -3px;
 }
 #item32 .dean{
-    top: -300px;
-    left: -0.5%;
+    top: -315px;
+    left: 25.5%;
 }
 #history1 #item32.h_link .smallpic{
-    top: -214px;
-    left: 42.5%;
+    top: -221px;
+    left: -2.5%;
 }
 #item33{
-    top: 8150px;
+    top: 7118px;
     left: 50.5%;
 }
 #history1 #item33.h_link .point1 {
-    left: -23%;
-    top: -320px;
+    left: -23.5%;
+    top: -133px;
 }
 #item33 .dean{
     top: -300px;
     left: -0.5%;
 }
 #history1 #item33.h_link .smallpic{
-    top: -214px;
+    top: -125px;
     left: 42.5%;
 }
 #item34{
-    top: 8677px;
+    top: 7654px;
     left: 50.5%;
 }
 #history1 #item34.h_link .point1 {
-    left: -23%;
-    top: -607px;
+    left: -22%;
+    top: -3px;
 }
 #item34 .dean{
     top: -300px;
@@ -1928,12 +1940,12 @@ ol > li {
     left: 42.5%;
 }
 #item35{
-    top: 9147px;
+    top: 8150px;
     left: 50.5%;
 }
 #history1 #item35.h_link .point1 {
     left: -23%;
-    top: -930px;
+    top: -320px;
 }
 #item35 .dean{
     top: -300px;
@@ -1944,12 +1956,12 @@ ol > li {
     left: 42.5%;
 }
 #item36{
-    top: 9684px;
-    left: 57.5%;
+    top: 8677px;
+    left: 50.5%;
 }
 #history1 #item36.h_link .point1 {
-    left: -13%;
-    top: -378px;
+    left: -23%;
+    top: -607px;
 }
 #item36 .dean{
     top: -300px;
@@ -1960,12 +1972,12 @@ ol > li {
     left: 42.5%;
 }
 #item37{
-    top: 10216px;
-    left: 49.5%;
+    top: 9147px;
+    left: 50.5%;
 }
 #history1 #item37.h_link .point1 {
-    left: -13%;
-    top: -378px;
+    left: -23%;
+    top: -930px;
 }
 #item37 .dean{
     top: -300px;
@@ -1976,12 +1988,12 @@ ol > li {
     left: 42.5%;
 }
 #item38{
-    top: 10720px;
-    left: 49.5%;
+    top: 9684px;
+    left: 57.5%;
 }
 #history1 #item38.h_link .point1 {
-    left: 125%;
-    top: -601px;
+    left: -13%;
+    top: -378px;
 }
 #item38 .dean{
     top: -300px;
@@ -1992,12 +2004,12 @@ ol > li {
     left: 42.5%;
 }
 #item39{
-    top: 11219px;
+    top: 10216px;
     left: 49.5%;
 }
 #history1 #item39.h_link .point1 {
-    left: 125%;
-    top: -238px;
+    left: -13%;
+    top: -378px;
 }
 #item39 .dean{
     top: -300px;
@@ -2008,12 +2020,12 @@ ol > li {
     left: 42.5%;
 }
 #item40{
-    top: 11758px;
-    left: 59.5%;
+    top: 10720px;
+    left: 49.5%;
 }
 #history1 #item40.h_link .point1 {
-    left: -25%;
-    top: -375px;
+    left: 125%;
+    top: -601px;
 }
 #item40 .dean{
     top: -300px;
@@ -2024,12 +2036,12 @@ ol > li {
     left: 42.5%;
 }
 #item41{
-    top: 12230px;
-    left: 59.5%;
+    top: 11219px;
+    left: 49.5%;
 }
 #history1 #item41.h_link .point1 {
-    left: -38%;
-    top: -3px;
+    left: 125%;
+    top: -238px;
 }
 #item41 .dean{
     top: -300px;
@@ -2040,12 +2052,12 @@ ol > li {
     left: 42.5%;
 }
 #item42{
-    top: 12769px;
-    left: 17.5%;
+    top: 11758px;
+    left: 59.5%;
 }
 #history1 #item42.h_link .point1 {
-    left: 83%;
-    top: -264px;
+    left: -25%;
+    top: -375px;
 }
 #item42 .dean{
     top: -300px;
@@ -2056,12 +2068,12 @@ ol > li {
     left: 42.5%;
 }
 #item43{
-    top: 12769px;
+    top: 12230px;
     left: 59.5%;
 }
 #history1 #item43.h_link .point1 {
-    left: -51%;
-    top: -264px;
+    left: -38%;
+    top: -3px;
 }
 #item43 .dean{
     top: -300px;
@@ -2072,12 +2084,12 @@ ol > li {
     left: 42.5%;
 }
 #item44{
-    top: 13217px;
-    left: 59.5%;
+    top: 12769px;
+    left: 17.5%;
 }
 #history1 #item44.h_link .point1 {
-    left: -51%;
-    top: -712px;
+    left: 83%;
+    top: -264px;
 }
 #item44 .dean{
     top: -300px;
@@ -2088,12 +2100,12 @@ ol > li {
     left: 42.5%;
 }
 #item45{
-    top: 13708px;
+    top: 12769px;
     left: 59.5%;
 }
 #history1 #item45.h_link .point1 {
     left: -51%;
-    top: -570px;
+    top: -264px;
 }
 #item45 .dean{
     top: -300px;
@@ -2104,12 +2116,12 @@ ol > li {
     left: 42.5%;
 }
 #item46{
-    top: 13897px;
-    left: 23.5%;
+    top: 13217px;
+    left: 59.5%;
 }
 #history1 #item46.h_link .point1 {
-    left: -30%;
-    top: -4px;
+    left: -51%;
+    top: -712px;
 }
 #item46 .dean{
     top: -300px;
@@ -2120,18 +2132,50 @@ ol > li {
     left: 42.5%;
 }
 #item47{
-    top: 14194px;
-    left: 67.5%;
+    top: 13708px;
+    left: 59.5%;
 }
 #history1 #item47.h_link .point1 {
-    left: -18%;
-    top: -4px;
+    left: -51%;
+    top: -570px;
 }
 #item47 .dean{
     top: -300px;
     left: -0.5%;
 }
 #history1 #item47.h_link .smallpic{
+    top: -214px;
+    left: 42.5%;
+}
+#item48{
+    top: 13897px;
+    left: 23.5%;
+}
+#history1 #item48.h_link .point1 {
+    left: -30%;
+    top: -4px;
+}
+#item48 .dean{
+    top: -300px;
+    left: -0.5%;
+}
+#history1 #item48.h_link .smallpic{
+    top: -214px;
+    left: 42.5%;
+}
+#item49{
+    top: 14194px;
+    left: 67.5%;
+}
+#history1 #item49.h_link .point1 {
+    left: -18%;
+    top: -4px;
+}
+#item49 .dean{
+    top: -300px;
+    left: -0.5%;
+}
+#history1 #item49.h_link .smallpic{
     top: -214px;
     left: 42.5%;
 }
@@ -2340,12 +2384,13 @@ ol > li {
     }
     .otime.ot01 {top: 66px; left: 50%;}
     .otime.ot06 {top: 3889px; left: 50%;}
-    .otime.ot11 {top: 7278px; left: 52%;}
-    .otime.ot13 {top: 8888px; left: 52%;}
-    .otime.ot14 {top: 10211px;left: 50%;}
-    .otime.ot15 {top: 10557px; left: 50%; background-color: #7cbaa5;}
-    .otime.ot16 {top: 11957px;left: 50%;}
-    .otime.ot16 {top: 12144px;left: 50%;}
+    .otime.ot11 {top: 7572px; left: 52%;}
+    .otime.ot13 {top: 9133px; left: 52%;}
+    .otime.ot14 {top: 10454px;left: 50%;}
+    .otime.ot15 {top: 10796px; left: 50%; background-color: #7cbaa5;}
+    .otime.ot16 {top: 11764px;left: 50%;}
+    .otime.ot17 {top: 12101px;left: 50%;}
+    .otime.ot18 {top: 12490px;left: 50%;}
     #history1 .h_link {
         position: relative;
         text-align: left;
@@ -2377,7 +2422,10 @@ ol > li {
         border-right: none;
     }
     #history1 .sort_1 .h_link.hasPic {
-        padding: 130px 30px 50px 0;
+        padding: 130px 30px 1067px 0;
+    }
+    #history1 .sort_1 #item29.h_link.hasPic {
+        padding: 130px 30px 167px 0;
     }
     #history1 .sort_3 .h_link.hasPic {
         padding: 130px 30px 200px 20px;
@@ -2392,34 +2440,34 @@ ol > li {
         padding: 10px 0 250px 30px;
     }
     #history1 .sort_1 #item26.h_link.hasPic {
-        padding: 130px 30px 1107px 0;
-    }
-    #history1 .sort_1 #item28.h_link.hasPic {
-        padding: 130px 30px 270px 0;
-    }
-    #history1 .sort_1 #item29.h_link.hasPic {
-        padding: 130px 30px 793px 0;
+        padding: 130px 30px 170px 0;
     }
     #history1 .sort_1 #item30.h_link.hasPic {
+        padding: 130px 30px 270px 0;
+    }
+    #history1 .sort_1 #item31.h_link.hasPic {
+        padding: 130px 30px 793px 0;
+    }
+    #history1 .sort_1 #item32.h_link.hasPic {
         padding: 130px 30px 600px 0;
     }
-    #history1 .sort_2 #item36.h_link.hasPic {
+    #history1 .sort_2 #item38.h_link.hasPic {
         padding: 130px 0 306px 30px;
     }
-    #history1 .sort_2 #item31.h_link.hasPic {
-        padding: 130px 0 350px 30px;
+    #history1 .sort_2 #item33.h_link.hasPic {
+        padding: 130px 0 640px 30px;
     }
-    #history1 .sort_2 #item40.h_link.hasPic {
-        padding: 130px 0 600px 30px;
+    #history1 .sort_2 #item42.h_link.hasPic {
+        padding: 130px 0 570px 30px;
     }
-    #history1 .sort_4 #item46.h_link.hasPic {
-        padding: 130px 0 250px 15px;
+    #history1 .sort_4 #item48.h_link.hasPic {
+        padding: 130px 15px 250px 0;
     }
     #history1 .h_link.sort2 {
         border-left: 5px solid #bdc53c;
     }
-    #history1 #item30.h_link.sort1,
-    #history1 #item41.h_link.sort3 {
+    #history1 #item32.h_link.sort1,
+    #history1 #item43.h_link.sort3 {
         border-left: 5px solid transparent;
     }
     #history1 .h_link.sort4 {
@@ -2537,6 +2585,40 @@ ol > li {
         height: 300px;
         max-height: 350px;
     }
+    #history1 #item46.h_link.hasPic,
+    #history1 #item47.h_link.hasPic {
+        height: 350px;
+    }
+    #history1 #item44.h_link.hasPic {
+        height: 300px;
+        max-height: 350px;
+    }
+    #history1 #item44.h_link.sort4,
+    #history1 #item48.h_link.sort4 {
+        border-left: none;
+        border-right: 5px solid #7cbaa5;
+        left: auto;
+        right: 97.3%;
+        padding: 130px 15px 50px 0;
+        text-align: right;
+    }
+    #history1 .sort_4 #item44.h_link .point1,
+    #history1 .sort_4 #item48.h_link .point1 {
+        right: -27.3px !important;
+        left: auto !important;
+        top: -20px !important;
+    }
+    #history1 .sort_4 #item44.h_link .hospital,
+    #history1 .sort_4 #item44.h_link .period,
+    #history1 .sort_4 #item48.h_link .hospital,
+    #history1 .sort_4 #item48.h_link .period {
+        background-color: transparent !important;
+    }
+    #history1 .sort_4 #item44.h_link .dean,
+    #history1 .sort_4 #item48.h_link .dean {
+        right: 15px !important;
+        left: auto;
+    }
 }
 
 @media (max-width: 1600px) {
@@ -2611,8 +2693,8 @@ ol > li {
     #history1 .sort_1 .h_link.default {
         right: -98.8%;
     }
-    #item41 .hospital,
-    #item41 .period {
+    #item43 .hospital,
+    #item43 .period {
         width: 95%;
     }
 }
@@ -2785,7 +2867,7 @@ ol > li {
         left: -112px !important;
     }
     #hr_list .sort_2 {
-        left: 44.5%;
+        left: 42.5%;
     }
     #history1 .sort_1 .h_link.default {
         right: -98.2%;
@@ -2808,30 +2890,57 @@ ol > li {
     #history1 .sort_3 .h_link.hasPic {
         padding: 130px 10px 230px 0;
     }
-    #history1 .sort_2 #item36.h_link.hasPic {
+    #history1 .sort_2 #item38.h_link.hasPic {
         padding: 130px 0 306px 15px;
     }
-    #history1 .sort_2 #item40.h_link.hasPic {
+    #history1 .sort_2 #item42.h_link.hasPic {
         padding: 130px 0 585px 15px;
     }
     #history1 .sort_1 #item26.h_link.hasPic {
-        padding: 130px 15px 1121px 0;
+        padding: 130px 15px 180px 0;
     }
     #history1 .sort_1 #item29.h_link.hasPic {
+        padding: 130px 30px 200px 0;
+    }
+    .otime.ot13 {
+        top: 9252px;
+        left: 52%;
+    }
+    .otime.ot14 {
+        top: 10566px;
+        left: 50%;
+    }
+    #history1 .sort_1 #item28.h_link.hasPic {
+        padding: 130px 30px 1150px 0;
+    }
+    #history1 .sort_1 #item31.h_link.hasPic {
         padding: 130px 15px 807px 0;
     }
-    #history1 .sort_2 #item31.h_link.hasPic {
-        padding: 130px 0 400px 15px;
+    #history1 .sort_2 #item33.h_link.hasPic {
+        padding: 130px 0 732px 15px;
+    }
+    #history1 .sort_4 #item44.h_link .hospital, #history1 .sort_4 #item44.h_link .period, #history1 .sort_4 #item48.h_link .hospital, #history1 .sort_4 #item48.h_link .period {
+        padding-right: 20px !important;
+    }
+    #history1 #item46.h_link.hasPic, #history1 #item47.h_link.hasPic {
+        height: 375px;
+        max-height: 400px;
     }
     .otime.ot11 {
-        top: 7329px;
-        width: 400px;
+        top: 7643px;
+        width: 420px;
     }
     .otime.ot15 {
-        top: 10581px;
+        top: 10945px;
     }
     .otime.ot16 {
-        top: 12162px;
+        top: 11929px;
+    }
+    .otime.ot17 {
+        top: 12314px;
+    }
+    .otime.ot18 {
+        top: 12684px;
     }
 }
 
@@ -3525,6 +3634,13 @@ ol > li {
     #history1 .sort_2 .h_link .point1,
     #history1 .sort_4 .h_link .point1{
         left: -20.3px !important;
+    }
+    #history1 #item44.h_link.sort4, #history1 #item48.h_link.sort4 {
+        right: 95%;
+    }
+    #history1 .sort_4 #item44.h_link .point1, #history1 .sort_4 #item48.h_link .point1 {
+        right: -33px !important;
+        top: 4px !important;
     }
 }
 
