@@ -2510,6 +2510,10 @@ ol > li {
         left: -27.3px !important;
         top: -5px !important;
     }
+    #history1 #item45.h_link .point1,
+    #history1 #item49.h_link .point1 {
+        top: -10px !important;
+    }
     #history1 .sort_1 .h_link .point1,
     #history1 .sort_3 .h_link .point1 {
         left: auto !important;
@@ -2598,7 +2602,7 @@ ol > li {
         border-left: none;
         border-right: 5px solid #7cbaa5;
         left: auto;
-        right: 97.3%;
+        right: 97.2%;
         padding: 130px 15px 50px 0;
         text-align: right;
     }
@@ -3640,7 +3644,7 @@ ol > li {
     }
     #history1 .sort_4 #item44.h_link .point1, #history1 .sort_4 #item48.h_link .point1 {
         right: -33px !important;
-        top: 4px !important;
+        top: -5px !important;
     }
 }
 

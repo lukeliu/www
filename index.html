@@ -631,7 +631,7 @@
 
                 $('#hr_list .sort_2, #hr_list .sort_3, #hr_list .sort_4').css('top', '');
                 $('#history1').css('min-height', '');
-                
+
                 resizeTimer = setTimeout(function() {
                     if ($(window).width() < 1775) {
                         var gap = 31;
@@ -645,10 +645,9 @@
                         $('#hr_list .sort_2').css('top', sort2 + 170);
                         $('#hr_list .sort_3').css('top', sort3 + -18);
                         $('#hr_list .sort_4').css({'top': (sort4 + 20), 'left': left4});
-                        
+
                         var sortHeight = $('#history1 .sort_4').position().top + $('#history1 .sort_4').height();
                         $('#history1').css('min-height', sortHeight + 100);
-
                         $('#svgAll .connection-svg path').remove();
                         return;
                     }
