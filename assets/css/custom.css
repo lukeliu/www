@@ -1376,6 +1376,7 @@ ol > li {
     border: 8px solid #fff;
     text-align: center;
     min-height: 63px;
+    white-space: nowrap;
 }
 
 .otime:before {
@@ -1713,7 +1714,7 @@ ol > li {
 }
 #item19{
     top: 4594px;
-    left: 72%;
+    left: 68.8%;
 }
 #item19 .dean{
     top: -80px;
@@ -1877,10 +1878,10 @@ ol > li {
 }
 #item31{
     top: 9700px;
-    left: 12%;
+    left: 10%;
 }
 #history1 #item31.h_link .point1 {
-    left: 86%;
+    left: 92%;
     top: -3px;
 }
 #item31 .dean{
@@ -2085,10 +2086,10 @@ ol > li {
 }
 #item44{
     top: 12769px;
-    left: 17.5%;
+    left: 15.5%;
 }
 #history1 #item44.h_link .point1 {
-    left: 83%;
+    left: 90%;
     top: -264px;
 }
 #item44 .dean{
@@ -2417,7 +2418,7 @@ ol > li {
         text-align: left;
         left: auto;
         right: -99.3%;
-        padding: 10px 0 50px 30px;
+        padding: 10px 0 50px 15px;
         border-left: 5px solid #c58f63;
         border-right: none;
     }
@@ -2431,10 +2432,10 @@ ol > li {
         padding: 130px 30px 200px 20px;
     }
     #history1 .sort_1 .h_link.hasPic.default {
-        padding: 10px 0 50px 30px;
+        padding: 10px 0 50px 15px;
     }
     #history1 .sort_1 #item15.h_link.hasPic.default {
-        padding: 10px 0 300px 30px;
+        padding: 10px 0 300px 15px;
     }
     #history1 .sort_1 #item25.h_link.hasPic.default {
         padding: 10px 0 250px 30px;
@@ -2814,6 +2815,11 @@ ol > li {
         max-width: 50vw;
         text-overflow: ellipsis;
     }
+    #history1 #item44 .hospital, #history1 #item44 .period,
+    #history1 #item48 .hospital, #history1 #item48 .period {
+        width: 44vw;
+        margin-left: -14px;
+    }
     #history1 .period {
         font-size: 14px;
         height: 22px;
@@ -2823,6 +2829,22 @@ ol > li {
         font-size: 16px;
         height: auto;
         line-height: 18px;
+    }
+    #history1 .sort2 .title {
+        white-space: nowrap;
+    }
+    #history1 #item44 .title,
+    #history1 #item48 .title {
+        white-space: nowrap;
+        margin-left: -12px;
+    }
+    #history1 #hr_list .sort_1 .title {
+        white-space: nowrap;
+        font-size: 15px;
+    }
+    #history1 #item48 .title {
+        text-align: right;
+        margin-left: -12px;
     }
     #history1 .h_link .dean {
         width: 75px;
@@ -2847,7 +2869,7 @@ ol > li {
     }
     .successive_deans .btn,
     .academy_history .btn {
-        font-size: 12px;
+        font-size: 3vw;
         box-shadow: 0 5px 5px -3px rgb(0 0 0 / 30%);
         padding: 8px 2.5vw;
     }
@@ -2887,6 +2909,7 @@ ol > li {
     }
     #history1 .pic3 {
         left: 42%;
+        bottom: 21px;
     }
     #history1 .sort_2 .h_link.hasPic {
         padding: 130px 0 50px 15px;
@@ -2911,7 +2934,7 @@ ol > li {
         left: 52%;
     }
     .otime.ot14 {
-        top: 10566px;
+        top: 10583px;
         left: 50%;
     }
     #history1 .sort_1 #item28.h_link.hasPic {
@@ -2927,7 +2950,7 @@ ol > li {
         padding-right: 20px !important;
     }
     #history1 #item46.h_link.hasPic, #history1 #item47.h_link.hasPic {
-        height: 375px;
+        height: 390px;
         max-height: 400px;
     }
     .otime.ot11 {
@@ -2938,13 +2961,13 @@ ol > li {
         top: 10945px;
     }
     .otime.ot16 {
-        top: 11929px;
+        top: 11946px;
     }
     .otime.ot17 {
-        top: 12314px;
+        top: 12335px;
     }
     .otime.ot18 {
-        top: 12684px;
+        top: 12712px;
     }
 }
 
@@ -3382,7 +3405,7 @@ ol > li {
         flex-direction: column;
         flex-wrap: nowrap;
         width: 196px;
-        height: 250px;
+        height: 280px;
         justify-content: flex-end;
         transform: translateX(-100%);
         border-width: 3px 0 3px 3px !important;
@@ -3408,7 +3431,7 @@ ol > li {
         flex-direction: column;
         flex-wrap: nowrap;
         width: 196px;
-        height: 250px;
+        height: 280px;
         justify-content: flex-end;
         transform: translateX(-100%);
         border-width: 3px 0 3px 3px !important;
@@ -3443,7 +3466,7 @@ ol > li {
         flex-direction: column;
         flex-wrap: nowrap;
         width: 195px;
-        height: 250px;
+        height: 280px;
         justify-content: flex-end;
         transform: translateX(0);
         border-width: 3px 3px 3px 0 !important;
@@ -3470,7 +3493,7 @@ ol > li {
         flex-direction: column;
         flex-wrap: nowrap;
         width: 195px;
-        height: 250px;
+        height: 280px;
         justify-content: flex-end;
         transform: translateX(0);
         border-width: 3px 3px 3px 0 !important;
@@ -3521,7 +3544,7 @@ ol > li {
         position: relative;
         max-width: 424px;
         transform: none;
-        width: calc(100% -20px);
+        width: calc(100% - 20px);
         left: auto;
         top: auto;
     }
@@ -3529,7 +3552,7 @@ ol > li {
         position: relative;
         max-width: 424px;
         transform: none;
-        width: calc(100% -20px);
+        width: calc(100% - 20px);
         left: auto;
         top: auto;
     }
@@ -3598,7 +3621,7 @@ ol > li {
     .otime2.ot10 {
         padding: 28px 15px;
         letter-spacing: 0;
-        font-size: 18px;
+        font-size: 17px;
     }
     .hinfo .htitle.ht1,
     .hinfo .htitle.ht2{
@@ -3645,6 +3668,20 @@ ol > li {
     #history1 .sort_4 #item44.h_link .point1, #history1 .sort_4 #item48.h_link .point1 {
         right: -33px !important;
         top: -5px !important;
+    }
+    #history1 .h_link .title i {
+        padding: 0 1px;
+    }
+    .hinfo h3 {
+        font-size: 16px;
+    }
+    .hinfo[num="9"] {
+        padding: 25px 5px 5px;
+        border-radius: 18px;
+    }
+    .hinfo[num="10"] {
+        padding: 25px 5px;
+        border-radius: 18px;
     }
 }
 
