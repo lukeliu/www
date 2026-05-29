@@ -629,10 +629,10 @@
             $(window).on('load resize', function() {
                 clearTimeout(resizeTimer);
 
-                $('#hr_list .sort_2, #hr_list .sort_3, #hr_list .sort_4').css('top', '');
-                $('#history1').css('min-height', '');
-
                 resizeTimer = setTimeout(function() {
+                    $('#hr_list .sort_2, #hr_list .sort_3, #hr_list .sort_4').css('top', '');
+                    $('#history1').css('min-height', '');
+
                     if ($(window).width() < 1775) {
                         var gap = 31;
                         if ($(window).width() < 580) {
