@@ -2357,6 +2357,7 @@ ol > li {
 @media (max-width: 1775px) {
     #history1 {
         min-height: auto;
+        overflow: visible;
         background: #fff url(../../images/hr_bg.jpg) 0 50px no-repeat;
         background-size: contain;
     }
