@@ -626,7 +626,12 @@
             });
 
             var resizeTimer;
+            var prevWidth = 0;
             $(window).on('load resize', function() {
+                var newWidth = $(window).width();
+                if (newWidth === prevWidth) return; // 寬度未變（iOS toolbar 高度變化）→ 略過
+                prevWidth = newWidth;
+
                 clearTimeout(resizeTimer);
 
                 resizeTimer = setTimeout(function() {
